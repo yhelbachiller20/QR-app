@@ -1,0 +1,14 @@
+1. Are you experiencing the following symptoms at present or for the past 2 weeks?
+(nakaranas ka ba ng mga sumunod na sintomas ngayon at sa nakaraang dalawang (2) linggo *
+- Sore Throat (Pananakit ng lalamunan/masakit lumunok)
+- Body pains (pananakit ng katawan)
+- Headache ( pananakit ng ulo)
+- Fever (lagnat)
+- Cough (ubo)
+- Colds (sipon)
+- Diarrhea (pagtatae)
+2. Have you worked together or stayed in the same close environment of the of a confirmed COVID-19 case?
+(May nakasama ka ba o naka trabahong tao na kumpirmadong may COVID-19/ may impeksyon ng coronavirus?) * 
+3. Have you had any contact with anyone with fever, coughs, colds and sore throat in the past two (2) weeks? (Mayroon ka bang nakasama na may lagnat, ubo, sipon, o sakit ng lalamunan sa nakalipas na dalawang (2) linggo?) *
+4. Have you travelled outside of the Philippines in the 14 days? (Ikaw ba ay nagbyahe sa labas ng pilipinas sa nakalipas na labing-apat na araw?) * 
+5. Have you travelled to any area in NCR aside from your home? (ikaw ba ay nagpunta sa iba pang parte ng NCR o Metro Manila bukod sa iyong bahay?) 
