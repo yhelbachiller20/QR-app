@@ -9,6 +9,7 @@
 		 <label for="Department">Department to Visit:</label>
 
 			<select name="Department">
+				<option value="0">&nbsp &nbsp ----- </option>
 				<option value="Admission">Admission</option>
 				<option value="Finance">Finance</option>
 				<option value="IT">Information Technology</option>
@@ -30,11 +31,11 @@
 				<label>Estimated Time to Visit:</label>
 				<br>
               <label>From:</label>
-				<input type="time" name="timeFrom" value="07:00" min="07:00" max="15:30">
+				<input type="time" name="timeFrom" value="--:--" min="07:00" max="15:30">
 			  <br>
 			  <br>
 			    <label>To:</label>
-				<input type="time" name="timeTo" value="16:00" max="16:00">
+				<input type="time" name="timeTo" value="--:--" min="08:00" max="16:00">
 			  <br>
 			  <br>
 			<p>"Please limit visit to 2 hours (maximum) only"</p> 
