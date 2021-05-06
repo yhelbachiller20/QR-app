@@ -7,7 +7,7 @@ if(isset($_POST['choices'])){
 }	
 		if(isset($_POST['choices'])){
 					if($yesTxt == "Yes"){
-		$_SESSION['hc4'] = ['Question4'=>"yes"];
+		$_SESSION['hc4'] = ['Question4'=>" yes"];
 			$url = $config["url_base"].'not.php';
 
 		}
