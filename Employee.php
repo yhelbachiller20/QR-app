@@ -19,8 +19,8 @@ include 'script/visitorlogs.php';
 					<br>
 					<br>
 			
-				<input type="submit" class="btn btn-primary" name="back" value="Previous" style="float:left">
-				<input type="submit" class="btn btn-primary" name="btnNext" value="Next" style="float:right">
+				<input type="submit" class="btn btn-primary" name="btnNext" value="Next" style="float:right;margin-right: 12px;">
+				<input type="submit" class="btn btn-primary" name="back" value="Previous" style="float:left;padding-left: 12px;border-left-width: 5px;margin-left: 8px;margin-right: 0px;">
 			<br>
 			<br />
 				<center>

@@ -7,7 +7,7 @@ include "common/header.php"; ?>
 		 <label for="Department">Department to Visit:</label>
 
 			<select name="Department" id="Department">
-			<option value="0"></option>
+			<option value="0">&nbsp &nbsp ----- </option>
 			  <option value="Admission">Admission</option>
 			  <option value="Finance">Finance</option>
 			  <option value="IT">Information Technology</option>
@@ -15,11 +15,11 @@ include "common/header.php"; ?>
 			  <option value="Registrar">Registrar</option>
 			</select> <br>
 			<div class="form-group">
-                <label> Person to visit:</label>
-                <input type="text" name="person" placeholder="Name of Person to visit">
+                <label> Person to Visit:</label>
+                <input type="text" name="person" placeholder="Name of Person to Visit">
             </div>
 				<div class="form-group">
-                <label> Reason to visit:</label><br>
+                <label> Reason to Visit:</label><br>
 				<textarea name="reason" rows="5" cols="40"></textarea>
             </div>
 			<?php

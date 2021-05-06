@@ -8,6 +8,6 @@ include "script/session_to_db.php";
 <html>
 <body>
 
-<script type="text/javascript"> alert("Sorry, you are not ALLOWED to PROCEED and ENTER Assumption Antipolo premises. \n Refer to School Health Protocols on FB Page and MS Teams Circular. \n HEALTH DECLARATION PROCESS ABORTED!")</script>
+<script type="text/javascript"> alert("We apologize but you are not allowed to proceed and enter the Assumption Antipolo premises. \n this is can be with the health protocols of the school.")</script>
 </body>
 </html>

@@ -15,7 +15,7 @@ include "common/header.php";?>
 			- Cough (ubo)<br>
 			- Colds (sipon)<br>
 			- Diarrhea (pagtatae)<br>
-			-Loss of smell or taste (pagkawala ng pang amoy at panlasa)
+			- Loss of smell or taste (pagkawala ng pang amoy at panlasa)
 			<br></p>
 			<form action="" method="post">
 				<input type="submit" class="btn btn-warning" name="btnYes" value="Yes" style="float:left;padding-left: 7px;margin-left: 13px;margin-right: 0px;">
