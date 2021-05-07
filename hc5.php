@@ -1,7 +1,7 @@
 <?php $pageTitle = "Health Checklist";?>
 <?php include 'common/header.php';?>
 <?php include 'script/hc5-model.php'; ?>
-<!--<?php var_dump($_SESSION["hc4"]);?>-->
+<?php var_dump($_SESSION["hc4"]);?>
    <div class="panel-body"></center>
 		   <form action="" method="post">
             <p style="font-size:15px">5.Have you travelled to any area in Antipolo aside from your home?<br> (Ikaw ba ay nagpunta sa iba pang parte ng Antipolo bukod sa iyong bahay?)</label>
