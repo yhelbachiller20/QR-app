@@ -1,18 +1,12 @@
 <?php
-if(isset($_POST['choices'])){
-	include "common/connect.php";
-	$yesNo =$_POST['yesno'];
-	$yesNotxt = $_POST['yesText'];
-	$question1 = $_SESSION["question1"];
-	$sql = "INSERT INTO `visitor`( `Question5`, q5txt) VALUES ('".$yesNo."','".$yesNotxt."')";
-	if ($conn->query($sql) === TRUE) {
-		include "common/config.php";
-		
-		$last_id = $conn->insert_id;
-		$url = $config["url_base"].'validation1.php?id='.sha1($last_id);
-		header('Location: '.$url);
-	} else {
-	  echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-}
 
+if (isset($_POST['choices'])) {
+    $_SESSION['hc5'] = ['Question5' => $_POST["yesno"], 'q5txt' => $_POST["yesTxt"]];
+    if ($_POST["yesno"] == "Yes") {
+        $url = $config["url_base"] . 'not.php';
+        header('Location: ' . $url);
+    } else {
+        $url = $config["url_base"] . 'validation1.php';
+        header('Location: ' . $url);
+    }
+}
