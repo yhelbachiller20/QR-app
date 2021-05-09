@@ -32,8 +32,8 @@ if (isset($_SESSION['hc4'])) {
     $dataToStore['q4txt'] = $_SESSION['hc4']['q4txt'];
 }
 if (isset($_SESSION['hc4'])) {
-    $dataToStore['Question5'] = $_SESSION['hc4']['Question5'];
-    $dataToStore['q5txt'] = $_SESSION['hc4']['q5txt'];
+    $dataToStore['Question5'] = $_SESSION['hc5']['Question5'];
+    $dataToStore['q5txt'] = $_SESSION['hc5']['q5txt'];
 }
 $stringColumnName = [];
 $stringValues = [];
