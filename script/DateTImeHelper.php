@@ -19,9 +19,13 @@ class DateTImeHelper {
      */
     public static function timeToHuman($time) {
         $timeConverted = strtotime($time);
+		
         if ($timeConverted) {
             return date('h:i a', $timeConverted);
-        }
+        } 
+
+
+
         return "";
     }
 
