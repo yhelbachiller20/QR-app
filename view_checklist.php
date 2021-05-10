@@ -51,15 +51,15 @@ if ($result->num_rows > 0) {
 </table>
 </body>
 
-    <form>
+    <form action="script/guardview-model.php" method="post">
         <div class="form-group"><br>
-           <label>Body Temp:&nbsp  </label><input type="text" placeholder=" --.-" />
+           <label>Body Temp:&nbsp  </label> <input type="text" name="txtBodyTemp"  placeholder="--.-">    
             <div class="form-group"><br>
 			<b> Guard Name:</b>
-			<input type="text" placeholder="Guard Name">
+			<input type="text" name="txtGuardName" placeholder="Guard Name">
 			<br>
 			<br>
-                <input type="submit" class="btn btn-primary" value="Submit">
+              <input type="submit" class="btn btn-primary" name="btnbodyTemp" value="Submit">	
 				<br>
             </div>	
             </center>  
