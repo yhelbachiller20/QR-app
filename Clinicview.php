@@ -106,7 +106,7 @@ if($result = mysqli_query($link, $sql)){
 mysqli_close($link);
 ?>
 					<br>
-				 <input type="submit" class="btn btn-primary" value="Start">
+			      <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 
             </div>
 <?php include "common/footer.php";?>

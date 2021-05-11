@@ -14,7 +14,7 @@ img {
 }
 </style>
 <body>
-
+<form action="clinic-login.php" method="post">
  <div class="container">
       <div class="row col-md-6 col-md-offset-3">
         <div class="panel panel-primary">
@@ -26,8 +26,8 @@ img {
 				<p style="font-size:30px"> <center> <h1> <u>Health Screening Procedure</u></h1>
 				</p> 
 				<br>
-				 <form action="Clogin.php" method="post">
-				 <input type="submit" class="btn btn-primary" value="Login">
+				 
+				 <input type="submit" class="btn btn-primary" value="Start">
 				</center>
 
             </div>
