@@ -1,4 +1,5 @@
 <?php
+
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "", "checklist");
@@ -9,12 +10,7 @@ if($link === false){
 }
  
 // Attempt update query execution
-$sql = "UPDATE visitor 
-SET 
-    GuardName = '".$_POST['txtGuardName']."' , 
-	Body_Temp = '".$_POST['txtBodyTemp']."'
-WHERE
-     id = 3"; 
+$sql = "UPDATE visitor SET Body_Temp='Body_Temp' WHERE id=1";
 if(mysqli_query($link, $sql)){
     echo "Records were updated successfully.";
 } else {
@@ -23,25 +19,4 @@ if(mysqli_query($link, $sql)){
  
 // Close connection
 mysqli_close($link);
-?>
-<?php
-		if(isset($_POST['btnbodyTemp'])){
-    $BodyTemp= $_POST['txtBodyTemp'];
-	$txtGuardName=$_POST['txtGuardName'];
-	
-	
-	if($BodyTemp >= 37.5)
-	{
-		 $url = $config["url_base"] . 'not.php';
-        header('Location: ' . $url);
-	}
-else if ($BodyTemp <=37.4)
-{
-//echo "Record Successfully!";
-}
-}
-
-
-
-
 ?>

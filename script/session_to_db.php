@@ -35,6 +35,8 @@ if (isset($_SESSION['hc5'])) {
     $dataToStore['Question5'] = $_SESSION['hc5']['Question5'];
     $dataToStore['q5txt'] = $_SESSION['hc5']['q5txt'];
 }
+
+
 $stringColumnName = [];
 $stringValues = [];
 foreach ($dataToStore as $columnName => $values) {
