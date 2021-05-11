@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
 </table>
 </body>
 
-    <form action="script/guardview-model.php" method="post">
+    <form action="script/guardview-model.php?id=<?php echo $_GET['id'];?>" method="post">
         <div class="form-group"><br>
            <label>Body Temp:&nbsp  </label> <input type="text" name="txtBodyTemp"  placeholder="--.-">    
             <div class="form-group"><br>

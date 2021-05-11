@@ -1,18 +1,18 @@
 <?php
-
 $link = mysqli_connect("localhost", "root", "", "checklist");
  
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+
 $sql = "UPDATE visitor 
 SET 
     GuardName = '".$_POST['txtGuardName']."' , 
 	Body_Temp = '".$_POST['txtBodyTemp']."'
-WHERE
-     id = 3"; 
+	WHERE
+	SHA1(id) = '" . $_GET['id'] . "'";
+	
 if(mysqli_query($link, $sql)){
     echo "Records were updated successfully.";
 } else {

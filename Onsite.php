@@ -1,25 +1,29 @@
-<?php $pageTitle = "Appointment Details  &nbsp";
-include "common/header.php"; ?>
+<?php $pageTitle = 'Appointment Details';?>
+<?php include 'common/header.php'; ?>
+<?php include 'script/onsitelogs.php'; ?>
+
 
         
-		<center>
-		<br>
+	<br><center>
+		<form action="" method="post">
 		 <label for="Department">Department to Visit:</label>
 
-			<select name="Department" id="Department">
-			<option value="0">&nbsp &nbsp ----- </option>
-			  <option value="Admission">Admission</option>
-			  <option value="Finance">Finance</option>
-			  <option value="IT">Information Technology</option>
-			  <option value="LRC">Library Resource Center</option>
-			  <option value="Registrar">Registrar</option>
-			</select> <br>
+			<select name="Department">
+				<option value="0">&nbsp &nbsp ----- </option>
+				<option value="Admission">Admission</option>
+				<option value="Finance">Finance</option>
+				<option value="IT">Information Technology</option>
+				<option value="LRC">Library Resource Center</option>
+				<option value="Registrar">Registrar</option>
+			</select> 
+			<br>
+			<br>
 			<div class="form-group">
                 <label> Person to Visit:</label>
-                <input type="text" name="person" placeholder="Name of Person to Visit">
+                <input type="text" name="person" placeholder="Name of Person to visit">
             </div>
 				<div class="form-group">
-                <label> Reason to Visit:</label><br>
+                <label> Reason for Visit:</label><br>
 				<textarea name="reason" rows="5" cols="40"></textarea>
             </div>
 			<?php
@@ -33,11 +37,10 @@ include "common/header.php"; ?>
 			  <br>
 			  <br>
 			 
-                <form action="choices.php" method="post">
-				<input type="submit" class="btn btn-primary" name="back" value="&nbsp Previous" style="float:left;padding-left: 7px;margin-left: 13px;margin-right: 0px;">
-			</form>
-			<form action="hc1.php" method="post">
 				<input type="submit" class="btn btn-primary" name="next" value="Next" style="float:right;margin-right: 13px;">
+			</form>
+			    <form action="choices.php" method="post">
+				<input type="submit" class="btn btn-primary" name="back" value="&nbsp Previous" style="float:left;padding-left: 7px;margin-left: 13px;margin-right: 0px;">
 			</form>
 			<br>
 			<br>

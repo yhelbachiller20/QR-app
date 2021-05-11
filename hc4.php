@@ -27,7 +27,7 @@ include "common/header.php";
             &nbsp
             &nbsp
             &nbsp
-            No  <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="No"><br>
+            No  <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="NO"><br>
             <div id="ifYes" style="visibility:hidden">
                 If yes, please indicate: <input type='text' id='yes' name='yesTxt'><br>
             </div>
