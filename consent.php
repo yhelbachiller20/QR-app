@@ -1,6 +1,6 @@
 <?php $pageTitle = "PRIVACY and CONSENT";
 include "common/header.php"; ?>
-<form action="visitor.php" onsubmit="if(document.getElementById('agree').checked) { return true; } { return false; }">
+<form action="visitor-form.php" onsubmit="if(document.getElementById('agree').checked) { return true; } { return false; }">
  
 		<div class="panel-body"></center>
 	<p>
