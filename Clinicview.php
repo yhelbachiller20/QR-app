@@ -22,13 +22,18 @@ div.panel-heading{
 .text-center{
 	text-align: center;
 }
+table, th, td {
+  border: 1px solid black;
+
 </style>
 <body>
-        <div class="panel panel-primary">
+
+        <div class="panel panel-primary">		
           <div class="panel-heading text-center">
 		  <img src="AA.png" id="AA" style="width:70px;height:70px;">
             <h2 class="text">Clinic</h2>
           </div>
+		  <div style="overflow-x:auto;">
 				  <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -41,8 +46,12 @@ if($link === false){
  
 // Attempt select query execution
 $sql = "SELECT * FROM visitor";
+$sql = "SELECT * FROM visitor LIMIT 10 OFFSET 0";
+
+
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
+		  
         echo "<table>";
             echo "<tr>";
       //          echo "<th>id</th>";
@@ -61,7 +70,9 @@ if($result = mysqli_query($link, $sql)){
 				echo"<th>Question 2 </th>";
 				echo"<th>Question 3 </th>";
 				echo"<th>Question 4 </th>";
-				echo"<th>Question 5 </th>";
+				echo"<th> Country </th>";
+				echo"<th> Question 5 </th>";
+				echo"<th> Town </th>";	
 				echo"<th> Form Created at</th>";
 				echo"<th>Body Temperature</th>";
 				echo "<br>";
@@ -101,12 +112,16 @@ if($result = mysqli_query($link, $sql)){
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
- 
+
 // Close connection
 mysqli_close($link);
 ?>
-					<br>
+
+
+				<br>
+				<a href="clinicview.php">Next</a>
 			      <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+				  <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
 
             </div>
 <?php include "common/footer.php";?>
