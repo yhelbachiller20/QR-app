@@ -27,7 +27,7 @@ table, th, td {
 
 </style>
 <body>
- <h1><?php echo $_GET["offset"];?></h1>
+
         <div class="panel panel-primary">		
           <div class="panel-heading text-center">
 		  <img src="AA.png" id="AA" style="width:70px;height:70px;">
@@ -46,15 +46,15 @@ if($link === false){
  
 // Attempt select query execution
 $sql = "SELECT * FROM visitor";
-$sql = "SELECT * FROM visitor LIMIT 20 OFFSET 0";
-$offset=10;
+$sql = "SELECT * FROM visitor LIMIT 20 OFFSET 40";
+
 	//$sql = "SELECT * FROM visitor LIMIT 10 OFFSET 0";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
 		  
         echo "<table>";
             echo "<tr>";
-      //          echo "<th>id</th>";
+          //      echo "<th>id</th>";
                 echo "<th>First Name</th>";
                 echo "<th>Last Name</th>";
 				echo "<th>Gender</th>";
@@ -104,7 +104,7 @@ if($result = mysqli_query($link, $sql)){
 			echo "</tr>";
         }
         echo "</table>";
-   // Free result set
+        // Free result set
         mysqli_free_result($result);
     } else{
         echo "No records matching your query were found.";
@@ -116,12 +116,12 @@ if($result = mysqli_query($link, $sql)){
 // Close connection
 mysqli_close($link);
 ?>
-		
+
+
 				<br>
-				  
 			      <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 				  <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-				  <a href="clinicview.php">Next</a>
-
+				    <a href="clinicview2.php">Previous</a>
+					<a href="clinicview3.php?">Next</a>
             </div>
 <?php include "common/footer.php";?>
