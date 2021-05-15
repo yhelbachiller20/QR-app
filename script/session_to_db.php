@@ -9,6 +9,10 @@ if (isset($_SESSION['visitor'])) {
     $dataToStore['Contact_Number'] = $_SESSION['visitor']['Contact_Number'];
     $dataToStore['Gender'] = $_SESSION['visitor']['Gender'];
 }
+if (isset($_SESSION['employee'])) {
+    $dataToStore['last_name'] = $_SESSION['employee']['last_name'];
+    $dataToStore['first_name'] = $_SESSION['employee']['first_name'];
+}
 if (isset($_SESSION['schedule'])) {
     $dataToStore['Department'] = $_SESSION['schedule']['department'];
     $dataToStore['person_to_visit'] = $_SESSION['schedule']['person'];

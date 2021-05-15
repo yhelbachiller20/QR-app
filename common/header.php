@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['visitor']) &&  strpos($_SERVER["REQUEST_URI"], "hc")){
+if((!isset($_SESSION['visitor']) && !isset($_SESSION['employee'])) &&  strpos($_SERVER["REQUEST_URI"], "hc")){
 	$url = $config["url_base"].'visitor.php';
 		header('Location: '.$url);
 }

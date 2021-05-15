@@ -1,7 +1,7 @@
 <?php $pageTitle = 'Please  fill out this'. "<br>".'Health Declaration form properly. '; ?>
 <?php 
 include 'common/header.php';
-include 'script/Employeelogs.php';
+include 'script/visitorlogs1.php';
 
 ?>
 
