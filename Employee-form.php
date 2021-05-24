@@ -22,7 +22,7 @@ include 'script/Employeelogs.php';
 			<br>
 			<br />
 				<center>
-			<a href="Statement.php">View Privacy Statement</a>.</p>
+			<a href="Econsent.php">View Privacy Statement</a>.</p>
 				</center>
     </div>   
 				</form>

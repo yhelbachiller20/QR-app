@@ -5,7 +5,12 @@
 	  $Email_error ="";
 	  $Contact_Number_error ="";
 	  $Gender_error = ""; 
-	  $lastname = $firstname = $Address= $Email = $Contact_Number = $Gender ="";
+	  $lastname = "";
+	  $firstname = "";
+	  $Address= "";
+	  $Email ="";
+	  $Contact_Number ="";
+	  $Gender ="";
 
 	if(isset($_POST['btnNext'])){
 		if(empty($_POST['last_name'])){
@@ -35,10 +40,10 @@
 			}
 		if(empty($_POST['Gender'])){
 			$Gender_error="Required";
-		}else{
-		$Gender=($_POST['Gender']);
-	}
-		
+			}else{
+				$Gender=($_POST['Gender']);
+			}
+	
 	$visitorInfo = [
 	'last_name' => $_POST['last_name'],
 	'first_name' => $_POST['first_name'], 
@@ -61,6 +66,6 @@ $Email_error !="Required" && $Contact_Number_error !="Required" && $Gender_error
 	
 //var_dump($_SESSION);	
 }
-	}	
+}	
 		
 ?>
