@@ -54,7 +54,7 @@
 			
 			echo "<table>";
 				echo "<tr>";
-					echo "<th>id</th>";
+			//		echo "<th>id</th>";
 					echo "<th>First Name</th>";
 					echo "<th>Last Name</th>";
 					echo "<th>Gender</th>";
@@ -79,7 +79,7 @@
 				echo "</tr>";
 			while($row = mysqli_fetch_array($result)){
 				echo "<tr>";
-				echo "<td>" . $row['id'] . "</td>";
+			//	echo "<td>" . $row['id'] . "</td>";
 					echo "<td>" . $row['first_name'] . "</td>"; 
 					echo "<td>" . $row['last_name'] . "</td>";
 					echo "<td>"	.$row ['Gender'] . "</td>";
