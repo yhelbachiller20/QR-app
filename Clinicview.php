@@ -27,7 +27,7 @@
 
 	</style>
 	<body>
-	<h1><?php echo $_GET["offset"];?></h1>
+<!--	<h1><?php echo $_GET["offset"];?></h1> -->
 			<div class="panel panel-primary">		
 			<div class="panel-heading text-center">
 			<img src="AA.png" id="AA" style="width:70px;height:70px;">
