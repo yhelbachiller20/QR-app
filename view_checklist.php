@@ -14,6 +14,17 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
+<?php 
+
+$origin = date_create($visitor['created_at']);
+$target = date_create(date("Y-m-d H:m:s"));
+$interval = date_diff($origin, $target);
+
+$hours = $interval->h;
+$hours = $hours + ($interval->days*24);
+
+?>
+<?php if($hours <= 8){ ?>
 <center>
     <h1><?php echo $visitor['first_name'] . ' ' . $visitor['last_name']; ?></h1>
 <table style="width:60%">
@@ -51,6 +62,8 @@ if ($result->num_rows > 0) {
 </table>
 </body>
 
+
+
     <form action="script/guardview-model.php?id=<?php echo $_GET['id'];?>" method="post">
         <div class="form-group"><br>
            <label>Body Temp:&nbsp  </label> <input type="text" name="txtBodyTemp"  placeholder="--.-">    
@@ -62,7 +75,10 @@ if ($result->num_rows > 0) {
               <input type="submit" class="btn btn-primary" name="btnbodyTemp" value="Submit">	
 				<br>
             </div>	
-            </center>  
+            </center> 
+<?php } else { ?>
+			<h1>The Schedule created lapsed.</h1>
+<?php } ?>
             <?php include "common/footer.php"; ?>
             <!--
             <script type="text/javascript">

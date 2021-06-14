@@ -1,4 +1,4 @@
 <?php
 
-$config['url_base'] = "http://localhost/QR-app/";
-//$config['url_base'] = "http://192.168.99.49/Sample2/";
+//$config['url_base'] = "https://hdf.assumptionantipolo.edu.ph/";
+$config['url_base'] = "http://192.168.99.50/QR-app/";

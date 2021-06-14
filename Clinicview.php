@@ -1,3 +1,11 @@
+	<?php 
+	$offset = 0;
+	$per_page = 10;
+	if(isset($_GET['page'])){
+		$offset = $_GET['page'] * $per_page;
+	}
+	$hasNextLink = true;
+	?>
 	<!DOCTYPE html>
 	<html lang="en">
 
@@ -45,68 +53,72 @@
 	}
 	
 	// Attempt select query execution
-	$sql = "SELECT * FROM visitor";
-	$sql = "SELECT * FROM visitor LIMIT 20 OFFSET 0";
-	$offset="20";
+	//$sql = "SELECT * FROM visitor";
+	$sql = "SELECT * FROM visitor LIMIT $per_page OFFSET $offset";
 		//$sql = "SELECT * FROM visitor LIMIT 10 OFFSET 0";
 	if($result = mysqli_query($link, $sql)){
 		if(mysqli_num_rows($result) > 0){
-			
-			echo "<table>";
+			echo "<div class='col-md-12 col-sm-12'>";
+			echo "<table class='table table-striped'>";
 				echo "<tr>";
 			//		echo "<th>id</th>";
 					echo "<th>First Name</th>";
 					echo "<th>Last Name</th>";
 					echo "<th>Gender</th>";
-					echo "<th>Address</th>";
-					echo "<th>Email</th>";
-					echo "<th>Contact Number </th>";
+					//echo "<th>Address</th>";
+					//echo "<th>Email</th>";
+					//echo "<th>Contact Number </th>";
 					echo"<th> Department to Visit </th>";
 					echo"<th> Person to Visit </th>";
-					echo"<th> Reason to Visit </th>";
-					echo"<th> From </th>";
-					echo"<th> To </th>";
-					echo"<th>Question 1 </th>";
-					echo"<th>Question 2 </th>";
-					echo"<th>Question 3 </th>";
-					echo"<th>Question 4 </th>";
-					echo"<th> Country </th>";
-					echo"<th> Question 5 </th>";
-					echo"<th> Town </th>";	
+					//echo"<th> Reason to Visit </th>";
+					//echo"<th> From </th>";
+					//echo"<th> To </th>";
+					//echo"<th>Question 1 </th>";
+					//echo"<th>Question 2 </th>";
+					//echo"<th>Question 3 </th>";
+					//echo"<th>Question 4 </th>";
+					//echo"<th> Country </th>";
+					//echo"<th> Question 5 </th>";
+					//echo"<th> Town </th>";	
 					echo"<th> Form Created at</th>";
 					echo"<th>Body Temperature</th>";
-					echo "<br>";
+					echo"<th>&nbsp;</th>";
 				echo "</tr>";
+				echo "<tbody>";
 			while($row = mysqli_fetch_array($result)){
 				echo "<tr>";
 			//	echo "<td>" . $row['id'] . "</td>";
 					echo "<td>" . $row['first_name'] . "</td>"; 
 					echo "<td>" . $row['last_name'] . "</td>";
 					echo "<td>"	.$row ['Gender'] . "</td>";
-					echo "<td>" .$row['Address']. "</th>";
-					echo "<td>" . $row['Email'] . "</td>";
-					echo "<td>" . $row['Contact_Number'] . "</td>";	
+					//echo "<td>" .$row['Address']. "</th>";
+					//echo "<td>" . $row['Email'] . "</td>";
+					//echo "<td>" . $row['Contact_Number'] . "</td>";	
 					echo "<td>" . $row['Department'] . "</td>";
 					echo "<td>" . $row['person_to_visit'] . "</td>";
-					echo "<td>" . $row['reason_to_visit'] . "</td>";
-					echo "<td>" . $row['From_visit'] . "</td>";
-					echo "<td>" . $row['To_visit'] . "</td>";
-					echo "<td>" . $row['Question1'] . "</td>";
-					echo "<td>" . $row['Question2'] . "</td>";
-					echo "<td>" . $row['Question3'] . "</td>";
-					echo "<td>" . $row['Question4'] . "</td>";
-					echo "<td>" . $row['q4txt'] . "</td>";
-					echo "<td>" . $row['Question5'] . "</td>";
-					echo "<td>" . $row['q5txt'] . "</td>";
+					//echo "<td>" . $row['reason_to_visit'] . "</td>";
+					//echo "<td>" . $row['From_visit'] . "</td>";
+					//echo "<td>" . $row['To_visit'] . "</td>";
+					//echo "<td>" . $row['Question1'] . "</td>";
+					//echo "<td>" . $row['Question2'] . "</td>";
+					//echo "<td>" . $row['Question3'] . "</td>";
+					//echo "<td>" . $row['Question4'] . "</td>";
+					//echo "<td>" . $row['q4txt'] . "</td>";
+					//echo "<td>" . $row['Question5'] . "</td>";
+					//echo "<td>" . $row['q5txt'] . "</td>";
 					echo "<td>" . $row['created_at'] . "</td>";
 					echo "<td>" . $row['Body_Temp'] . "</td>";
+					echo "<td><a href='view_visit_details.php?id=".$row["id"]."'>View</a></td>";
 				
 				echo "</tr>";
 			}
+			echo "</tbody>";
 			echo "</table>";
+			echo "</div>";
 	// Free result set
 			mysqli_free_result($result);
 		} else{
+			$hasNextLink = false;
 			echo "No records matching your query were found.";
 		}
 	} else{
@@ -116,13 +128,17 @@
 	// Close connection
 	mysqli_close($link);
 	?>
-
-			
+	<?php if(isset($_GET['page']) && $_GET['page'] >= 1){ ?>
+	<a href="Clinicview.php?page=<?php echo $_GET['page'] - 1;?>">< PREV</a>
+	<?php } ?>
+<?php if($hasNextLink) { ?>
+<a href="Clinicview.php?page=<?php echo $_GET['page'] + 1;?>">NEXT ></a>
+<?php } ?>
 					<br>
 					
 					<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 					<a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-					<a href="clinicview.php">Next</a>
+	
 
 				</div>
 	<?php include "common/footer.php";?>
