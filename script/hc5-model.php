@@ -1,5 +1,5 @@
 <?php
-
+  
 if (isset($_POST['choices'])) {
     $_SESSION['hc5'] = ['Question5' => $_POST["yesno"], 'q5txt' => $_POST["yesTxt"]];
     if ($_POST["yesno"] == "Yes") {

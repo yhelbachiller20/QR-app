@@ -1,7 +1,15 @@
 <?php $pageTitle = "Health Checklist &nbsp &nbsp";
 include "common/header.php"; ?>
 <?php include 'script/hc3-model.php'; ?>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+</script>
 
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload=""> 
      <div class="panel-body"></center>
 
             <p style="font-size:15px">3. Have you had any contact with anyone with fever, cough, colds and sore throat in the past two (2) weeks?

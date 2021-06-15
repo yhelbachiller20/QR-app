@@ -1,6 +1,15 @@
 <?php $pageTitle = "Health Checklist";
 include "common/header.php";?>
 <?php include 'script/hc1-model.php'; ?>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+</script>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
           <div class="panel-body"></center>
 

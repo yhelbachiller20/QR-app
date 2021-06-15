@@ -4,12 +4,21 @@
 <?php include "common/header.php";?>
 <?php include "common/connect.php";?>
 <?php include "script/session_to_db.php";?>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+</script>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
           <div class="panel-body"><center>
 		  <img src="<?php echo $config['url_base'].'generateqr.php?type=checklist&id='.$keyHash;?>"/>
 		  
 		<br>
 
-		 <form action="home.php" method="post">
+		 <form action="index.php" method="post">
 		<input type="submit" name="ok" value="ok">
 		</form>
 		

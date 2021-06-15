@@ -4,7 +4,15 @@ $pageTitle = "Health Checklist &nbsp &nbsp";
 include "common/header.php";
 ?>
 <?php include 'script/hc4-model.php'; ?>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+</script>
 
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload=""> 
 <script>
     function yesnoCheck() {
         if (document.getElementById('yesCheck').checked) {

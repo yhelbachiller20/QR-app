@@ -1,6 +1,15 @@
 <?php $pageTitle = "Health Checklist";
 include "common/header.php";?>
 <?php include 'script/hc2-model.php'; ?>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+</script>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
           <div class="panel-body"></center>
 
 	<p style="font-size:15px">2. Have you worked together or stayed in the same close environment of a confirmed COVID-19 case for the past 2 weeks? 

@@ -29,7 +29,7 @@ mysqli_close($link);
 	
 	if($BodyTemp >= 37.5)
 	{
-		 $url = $config["url_base"] . 'not.php';
+		 $url = $config["url_base"] . 'reject2.php';
         header('Location: ' . $url);
 	}
 else if ($BodyTemp <=37.4)

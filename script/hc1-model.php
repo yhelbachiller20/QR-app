@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['btnNo'])){
 //gawin dito ang back
 	$_SESSION['hc1'] = ['Question1'=> "NO"];
