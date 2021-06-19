@@ -2,7 +2,7 @@
 
 $connection = mysqli_connect("localhost", "root", "");
 $db = mysqli_select_db($connection, 'checklist');
-
+$_SESSION['log_type'] = 10;
 if (isset($_POST['schedNext'])) {
     $_SESSION["schedule"] = ['department' => $_POST['Department'], 'person' => $_POST['person'], 'reason' => $_POST['reason'], 'timeTo' => $_POST['timeTo'], 'timeFrom' => $_POST['timeFrom']];
     header("location: hc1.php");

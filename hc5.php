@@ -10,30 +10,33 @@
 </script>
 
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-  
-<div class="panel-body"></center>
-<form action="" method="post">
-    <p style="font-size:15px">5.Have you travelled to any area in Antipolo aside from your home?<br> (Ikaw ba ay nagpunta sa iba pang parte ng Antipolo bukod sa iyong bahay?)</label>
-        <br><br>
-    <Center>
-        Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" value="Yes">
-        &nbsp
-        &nbsp 
-        &nbsp
-        &nbsp
-        &nbsp
-        &nbsp
-        No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="No">
-        <br>
-    </center>
-    <div id="ifYes" style="visibility:hidden">
-        If yes, please indicate: <input type='text' id='yes' name='yesText'><br>
-    </div>
-    <center>
-        <br>
-        <input type="submit"  class="btn btn-primary" name="choices" value="Submit">
-    </center>
-</form>
+
+    <div class="panel-body"></center>
+    <form action="" method="post">
+        <p style="font-size:15px">5.Have you travelled to any area in Antipolo aside from your home?<br> (Ikaw ba ay nagpunta sa iba pang parte ng Antipolo bukod sa iyong bahay?)</label>
+            <br><br>
+        <Center>
+            <?php if (!empty($noChoiceSelected)) { ?>
+                <p style="color:red;"><?php echo $noChoiceSelected; ?></p>
+            <?php }; ?>
+            Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" value="Yes">
+            &nbsp
+            &nbsp 
+            &nbsp
+            &nbsp
+            &nbsp
+            &nbsp
+            No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="No">
+            <br>
+        </center>
+        <div id="ifYes" style="visibility:hidden">
+            If yes, please indicate: <input type='text' id='yes' name='yesText'><br>
+        </div>
+        <center>
+            <br>
+            <input type="submit"  class="btn btn-primary" name="choices" value="Submit">
+        </center>
+    </form>
 </div>
 <script type="text/javascript">
 
