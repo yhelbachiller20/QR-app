@@ -9,9 +9,8 @@
         window.history.forward();
     }
 </script>
+	<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
-<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
 
 <script type="text/javascript"> alert("Oppsss... It looks like you have fever. please contact our school nurse. \n Thank you!")</script>
-

@@ -8,5 +8,6 @@ if (isset($_POST['choices'])) {
     } else {
         $url = $config["url_base"] . 'hc5.php';
         header('Location: ' . $url);
+		
     }
 }
