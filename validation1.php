@@ -14,7 +14,7 @@
 
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
     <div class="panel-body"><center>
-            <?php echo $keyHash; ?>
+      <!--      <?php echo $keyHash; ?> -->
             <img src="<?php echo $config['url_base'] . 'generateqr.php?type=checklist&id=' . $keyHash; ?>"/>
 
             <br>

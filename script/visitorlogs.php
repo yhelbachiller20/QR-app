@@ -12,6 +12,7 @@
 	  $Contact_Number ="";
 	  $Gender ="";
 
+
 	if(isset($_POST['btnNext'])){
 		if(empty($_POST['last_name'])){
 			$lastname_error="Required";
@@ -40,6 +41,7 @@
 			}
 		if(empty($_POST['Gender'])){
 			$Gender_error="Required";
+			$gender="";
 			}else{
 				$Gender=($_POST['Gender']);
 			}
@@ -50,7 +52,7 @@
 	'Address' => $_POST['Address'],
 	'Email'=>$_POST['Email'],
 	'Contact_Number'=>$_POST['Contact_Number'],
-	'Gender'=>$_POST['Gender']];
+	'Gender'=>$gender];
 	
 	$_SESSION['visitor'] = $visitorInfo;
 	$last_name=$_POST['last_name'];
@@ -58,7 +60,7 @@
 	$Address=$_POST['Address'];
 	$Email=$_POST['Email'];
 	$Contact_Number=$_POST['Contact_Number'];
-	$Gender=$_POST['Gender'];
+	
 	
 if($lastname_error !="Required" && $firstname_error !="Required" && $Address_error !="Required" && 
 $Email_error !="Required" && $Contact_Number_error !="Required" && $Gender_error !="Required"){
