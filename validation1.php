@@ -1,5 +1,5 @@
 <?php $pageTitle = "<h2>Online Health Declaration Form Completed!</h2><br>
-<h5>Please take screenshot of this QR code and show it to the gate guard upon entry. </h5>
+<h5>Please take a screenshot of this QR code and show it to the gate guard upon entry. </h5>
 "; ?>
 <?php include "common/header.php"; ?>
 <?php include "common/connect.php"; ?>
@@ -19,7 +19,7 @@
 
             <br>
 
-            <form action="index.php" method="post">
+            <form action="Employee.php" method="post">
                 <input type="submit" name="ok" value="ok">
             </form>
 

@@ -28,8 +28,8 @@
             </div>
 			<?php
 				echo "Valid only " . date("Y/m/d") . "<br>";
-				echo "Today is " . date("l"); "<br>";
-				echo date_default_timezone_set("Singapore") . "<br>";
+				echo "Today is " . date("l") .  "<br>";
+				date_default_timezone_set("Singapore") . "<br>";
 				echo "The time is " . date("h:i:sa");
 				?>
 			<p>"Please limit visit to 2 hours (maximum) only"</p> 
