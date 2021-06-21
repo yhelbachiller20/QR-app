@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "<h2>Information &nbsp &nbsp</h2> <h3>Please Input your Body Temperature</h3>";
+$pageTitle = "<h2>Information &nbsp &nbsp</h2> <h3></h3>";
 include "common/header.php";
 unset($_SESSION['employee']);
 ?>
