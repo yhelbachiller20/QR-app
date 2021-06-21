@@ -6,16 +6,10 @@
         
 	<br><center>
 		<form action="" method="post">
-		 <label for="Department">Department to Visit:</label>
-
-			<select name="Department">
-				<option value="0">&nbsp &nbsp ----- </option>
-				<option value="Admission">Admission</option>
-				<option value="Finance">Finance</option>
-				<option value="IT">Information Technology</option>
-				<option value="LRC">Library Resource Center</option>
-				<option value="Registrar">Registrar</option>
-			</select> 
+		<div class="form-group">
+                <label> Department to Visit:</label>
+                <input type="text" name="Department" placeholder="Place to visit">
+            </div>
 			<br>
 			<br>
 			<div class="form-group">
