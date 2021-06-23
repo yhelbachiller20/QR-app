@@ -11,5 +11,5 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 </script> 
 
 
-<script type="text/javascript"> alert("We apologize but you are not allowed to proceed and enter the Assumption Antipolo premises. \n this is inline with the health protocols of the school.")</script>
+<script type="text/javascript"> alert("We apologize but you are not allowed to proceed and enter the Assumption Antipolo premises. This is In-line with the health protocols of the school.")</script>
 

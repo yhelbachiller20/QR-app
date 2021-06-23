@@ -7,7 +7,7 @@
 	<br><center>
 		<form action="" method="post">
 		<div class="form-group">
-                <label> Department to Visit:</label>
+                  <label> Area/s or Department/s to Visit:</label>
                 <input type="text" name="Department" placeholder="Place to visit">
             </div>
 			<br>
