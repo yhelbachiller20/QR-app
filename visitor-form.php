@@ -7,7 +7,7 @@ include 'script/visitorlogs.php';
 <form action="" method="post">
             <div class="form-group"><br />
 			 <label>&nbsp &nbsp Last Name:</label>
-                <input type="text" <?php echo $last_name;?> name="last_name" class="form-control" placeholder="Lastname">
+                <input type="text" value="<?php echo $last_name;?>" name="last_name" class="form-control" placeholder="Lastname">
 				*<?php echo $lastname_error;?>
             </div> 
 			<div class="form-group">

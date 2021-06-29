@@ -43,7 +43,7 @@
 			$Gender_error="Required";
 			$gender="";
 			}else{
-				$Gender=($_POST['Gender']);
+				$gender=($_POST['Gender']);
 			}
 	
 	$visitorInfo = [

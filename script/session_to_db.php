@@ -16,10 +16,14 @@
         $dataToStore['Email'] = $_SESSION['visitor']['Email'];
         $dataToStore['Contact_Number'] = $_SESSION['visitor']['Contact_Number'];
         $dataToStore['Gender'] = $_SESSION['visitor']['Gender'];
+	unset($_SESSION['visitor']);
     }
     if (isset($_SESSION['employee'])) {
         $dataToStore['last_name'] = $_SESSION['employee']['last_name'];
         $dataToStore['first_name'] = $_SESSION['employee']['first_name'];
+	unset($_SESSION['employee']);
+
+
     }
     if (isset($_SESSION['schedule'])) {
         $dataToStore['Department'] = $_SESSION['schedule']['department'];
@@ -27,29 +31,46 @@
         $dataToStore['reason_to_visit'] = $_SESSION['schedule']['reason'];
         $dataToStore['From_visit'] = $_SESSION['schedule']['timeFrom'];
         $dataToStore['To_visit'] = $_SESSION['schedule']['timeTo'];
+	unset($_SESSION['schedule']);
+
     }
 
     if (isset($_SESSION['hc1'])) {
         $dataToStore['Question1'] = $_SESSION['hc1']['Question1'];
+	unset($_SESSION['hc1']);
+
     }
 
     if (isset($_SESSION['hc2'])) {
         $dataToStore['Question2'] = $_SESSION['hc2']['Question2'];
+	unset($_SESSION['hc2']);
+
     }
     if (isset($_SESSION['hc3'])) {
         $dataToStore['Question3'] = $_SESSION['hc3']['Question3'];
+	unset($_SESSION['hc3']);
+
     }
     if (isset($_SESSION['hc4'])) {
         $dataToStore['Question4'] = $_SESSION['hc4']['Question4'];
         $dataToStore['q4txt'] = $_SESSION['hc4']['q4txt'];
+	unset($_SESSION['hc4']);
+
     }
     if (isset($_SESSION['hc5'])) {
         $dataToStore['Question5'] = $_SESSION['hc5']['Question5'];
         $dataToStore['q5txt'] = $_SESSION['hc5']['q5txt'];
+	unset($_SESSION['hc5']);
+
+
+
     }
 
     $dataToStore['type'] = $_SESSION['type'];
+	unset($_SESSION['type']);
     $dataToStore['log_type'] = $_SESSION['log_type'];
+	unset($_SESSION['log_type']);
+
     $stringColumnName = [];
     $stringValues = [];
     foreach ($dataToStore as $columnName => $values) {
