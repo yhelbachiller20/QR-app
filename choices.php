@@ -11,9 +11,10 @@ include "common/header.php";
         <center>
             <a href="Schedule.php" class="btn btn-warning ml-3">By Schedule</a>
             <a href="Onsite.php" class="btn btn-warning ml-3">&nbsp Onsite &nbsp</a>
-            <?php if ($_SESSION["type"] == 20) { ?>
+			<a href="hc1.php" class="btn btn-warning ml-3">&nbsp Work From Home  &nbsp</a>
+            <!--<?php if ($_SESSION["type"] == 20) { ?>
                 <a href="wfh.php" class="btn btn-warning ml-3">&nbsp Work From Home &nbsp</a>
-<?php } ?>
+<?php } ?>!>
             </p>        
         </center>
     </div>

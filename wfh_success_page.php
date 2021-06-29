@@ -1,11 +1,11 @@
 <?php
-$pageTitle = "<h2>Information &nbsp &nbsp</h2> <h3></h3>";
+$pageTitle = "<h2>Work From Home &nbsp &nbsp</h2> <h3></h3>";
 include "common/header.php";
 unset($_SESSION['employee']);
 ?>
-<h1>Record Successfully saved.</h1>
-<p>Stay Safe!</p>
- <center> 
+<center>
+<h1>Body temperature input Successfully saved.</h1>
+<p>Stay Safe and healthy!</p>
 	<form action="Employee.php" method="post">
                 <input type="submit" name="ok" value="ok">
             </form>

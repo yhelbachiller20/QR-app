@@ -19,7 +19,7 @@
 
             <br>
 
-            <form action="Employee.php" method="post">
+            <form action="completed.php" method="post">
                 <input type="submit" name="ok" value="ok">
             </form>
 
