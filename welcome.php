@@ -1,6 +1,10 @@
 <?php
+$pageTitle = "Assumption Antipolo";
+include "common/header.php";
+?>
+<?php
 // Initialize the session
-session_start();
+//session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -9,48 +13,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 ?>
  
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Privacy Notice and Consent</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<style>
-        /* Modify the background color */
-          
-        .navbar-custom {
-            background-color: gold;
-        }
-        /* Modify brand and text color */
-          
-        .navbar-custom .navbar-brand,
-        .navbar-custom .navbar-text {
-            color: gold;
-        }
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{ font: 14px sans-serif; text-align: center; }
     </style>
+</head>
 <body>
-  
-
-<div class="container">
-      <div class="row col-md-6 col-md-offset-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <h2><center></h2></center>
-          </div>
-          <div class="panel-body"></center>
-
-<body>
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></h1></b>.
+    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
 		<a href="clinicview.php" class="btn btn-primary">Reports</a>
-		<a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-    
+        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+        <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+		
     </p>
 </body>
 </html>

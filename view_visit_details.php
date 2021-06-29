@@ -1,5 +1,6 @@
 <?php $pageTitle = 'Please  fill out this'. "<br>".'Health Declaration form properly. '; ?>
 <?php 
+include 'config.php';
 include 'common/header.php';
 //connect to database
 include 'common/connect.php';

@@ -1,260 +1,127 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.14  Distrib 5.5.68-MariaDB, for Linux (x86_64)
 --
--- Host: 127.0.0.1
--- Generation Time: May 25, 2021 at 01:31 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.0.23
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: checklist
+-- ------------------------------------------------------
+-- Server version	5.5.68-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `checklist`
---
-
--- --------------------------------------------------------
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `abc`
 --
 
+DROP TABLE IF EXISTS `abc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `abc` (
-  `id` int(11) NOT NULL,
-  `name` char(50) NOT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(50) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `abc`
+--
+
+LOCK TABLES `abc` WRITE;
+/*!40000 ALTER TABLE `abc` DISABLE KEYS */;
+/*!40000 ALTER TABLE `abc` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `gender`
 --
 
+DROP TABLE IF EXISTS `gender`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gender` (
-  `id` int(11) NOT NULL,
-  `gender` varchar(30) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gender` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=148 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `gender`
 --
 
-INSERT INTO `gender` (`id`, `gender`) VALUES
-(6, 'Yes'),
-(7, 'None_of_th'),
-(8, 'None_of_the_Above'),
-(9, 'None of the Above'),
-(10, 'Yes'),
-(11, 'Yes'),
-(12, 'Yes'),
-(13, 'Yes'),
-(14, 'Yes'),
-(15, ''),
-(16, 'None of the Above'),
-(17, 'Yes'),
-(18, 'Yes'),
-(19, 'Yes'),
-(20, 'None of the Above'),
-(21, 'None of the Above'),
-(22, 'Yes'),
-(23, ''),
-(24, 'None of the Above'),
-(25, 'Yes'),
-(26, 'None of the Above'),
-(27, 'Yes'),
-(28, 'Yes'),
-(29, 'None of the Above'),
-(30, ''),
-(31, ''),
-(32, ''),
-(33, ''),
-(34, ''),
-(35, ''),
-(36, ''),
-(37, 'Yes'),
-(38, ''),
-(39, ''),
-(40, ''),
-(41, ''),
-(42, ''),
-(43, ''),
-(44, ''),
-(45, ''),
-(46, ''),
-(47, ''),
-(48, ''),
-(49, ''),
-(50, ''),
-(51, ''),
-(52, ''),
-(53, ''),
-(54, ''),
-(55, ''),
-(56, ''),
-(57, ''),
-(58, ''),
-(59, ''),
-(60, ''),
-(61, ''),
-(62, ''),
-(63, ''),
-(64, ''),
-(65, ''),
-(66, ''),
-(67, ''),
-(68, ''),
-(69, ''),
-(70, ''),
-(71, ''),
-(72, ''),
-(73, ''),
-(74, ''),
-(75, ''),
-(76, ''),
-(77, ''),
-(78, ''),
-(79, ''),
-(80, ''),
-(81, ''),
-(82, ''),
-(83, ''),
-(84, ''),
-(85, ''),
-(86, ''),
-(87, ''),
-(88, 'Yes'),
-(89, 'None of the Above'),
-(90, ''),
-(91, ''),
-(92, ''),
-(93, ''),
-(94, ''),
-(95, ''),
-(96, ''),
-(97, ''),
-(98, ''),
-(99, ''),
-(100, ''),
-(101, ''),
-(102, ''),
-(103, ''),
-(104, ''),
-(105, ''),
-(106, ''),
-(107, ''),
-(108, ''),
-(109, ''),
-(110, ''),
-(111, ''),
-(112, ''),
-(113, ''),
-(114, ''),
-(115, ''),
-(116, ''),
-(117, 'None of the Above'),
-(118, ''),
-(119, ''),
-(120, ''),
-(121, ''),
-(122, ''),
-(123, ''),
-(124, ''),
-(125, ''),
-(126, ''),
-(127, ''),
-(128, ''),
-(129, ''),
-(130, ''),
-(131, ''),
-(132, ''),
-(133, ''),
-(134, ''),
-(135, ''),
-(136, ''),
-(137, ''),
-(138, ''),
-(139, ''),
-(140, ''),
-(141, ''),
-(142, ''),
-(143, ''),
-(144, ''),
-(145, ''),
-(146, ''),
-(147, '');
-
--- --------------------------------------------------------
+LOCK TABLES `gender` WRITE;
+/*!40000 ALTER TABLE `gender` DISABLE KEYS */;
+INSERT INTO `gender` VALUES (6,'Yes'),(7,'None_of_th'),(8,'None_of_the_Above'),(9,'None of the Above'),(10,'Yes'),(11,'Yes'),(12,'Yes'),(13,'Yes'),(14,'Yes'),(15,''),(16,'None of the Above'),(17,'Yes'),(18,'Yes'),(19,'Yes'),(20,'None of the Above'),(21,'None of the Above'),(22,'Yes'),(23,''),(24,'None of the Above'),(25,'Yes'),(26,'None of the Above'),(27,'Yes'),(28,'Yes'),(29,'None of the Above'),(30,''),(31,''),(32,''),(33,''),(34,''),(35,''),(36,''),(37,'Yes'),(38,''),(39,''),(40,''),(41,''),(42,''),(43,''),(44,''),(45,''),(46,''),(47,''),(48,''),(49,''),(50,''),(51,''),(52,''),(53,''),(54,''),(55,''),(56,''),(57,''),(58,''),(59,''),(60,''),(61,''),(62,''),(63,''),(64,''),(65,''),(66,''),(67,''),(68,''),(69,''),(70,''),(71,''),(72,''),(73,''),(74,''),(75,''),(76,''),(77,''),(78,''),(79,''),(80,''),(81,''),(82,''),(83,''),(84,''),(85,''),(86,''),(87,''),(88,'Yes'),(89,'None of the Above'),(90,''),(91,''),(92,''),(93,''),(94,''),(95,''),(96,''),(97,''),(98,''),(99,''),(100,''),(101,''),(102,''),(103,''),(104,''),(105,''),(106,''),(107,''),(108,''),(109,''),(110,''),(111,''),(112,''),(113,''),(114,''),(115,''),(116,''),(117,'None of the Above'),(118,''),(119,''),(120,''),(121,''),(122,''),(123,''),(124,''),(125,''),(126,''),(127,''),(128,''),(129,''),(130,''),(131,''),(132,''),(133,''),(134,''),(135,''),(136,''),(137,''),(138,''),(139,''),(140,''),(141,''),(142,''),(143,''),(144,''),(145,''),(146,''),(147,'');
+/*!40000 ALTER TABLE `gender` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `tbl_name`
 --
 
+DROP TABLE IF EXISTS `tbl_name`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_name` (
   `Department` text NOT NULL,
   `column2` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `tbl_name`
 --
 
-INSERT INTO `tbl_name` (`Department`, `column2`) VALUES
-('mariel', 'ron'),
-('', '[value-2]');
-
--- --------------------------------------------------------
+LOCK TABLES `tbl_name` WRITE;
+/*!40000 ALTER TABLE `tbl_name` DISABLE KEYS */;
+INSERT INTO `tbl_name` VALUES ('mariel','ron'),('','[value-2]');
+/*!40000 ALTER TABLE `tbl_name` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Address` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Address` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `Address`) VALUES
-(1, 'MarielBachiller', '$2y$10$UzRdPiYumYOh.fuleE.V1O3brm5NdQ7Yqn3wb22dVm0', '2021-04-01 09:03:49', ''),
-(2, 'itantipolo', '$2y$10$NPjoQTxM0X9bIAveJTcV1uJdrjd3m2spzvyeBuiRh27', '2021-04-01 09:13:05', ''),
-(3, 'Ella', '$2y$10$tveudBuAXiypoXKty86RFOIPnGBBfddPoiWDaQ3VsAA', '2021-04-01 09:28:03', ''),
-(4, 'YHELBACHILLER', '$2y$10$2vsnH9EKJQ/pAmRNXzTNKOjaBwxuj6S43vXmIM3eJds', '2021-04-01 09:34:10', ''),
-(5, 'EllaMe', '$2y$10$OA1P79moAw321hw3P.WFQ.bZ9t9apt8txZVTKDS7vuq', '2021-04-01 09:51:55', ''),
-(7, 'Mariel1', '$2y$10$vJ7TgkD4l12HA/WOu5ttdOA39AN5Vj50vDi6r4WOo.S', '2021-04-01 10:58:55', ''),
-(8, 'AA123', '$2y$10$Q2GL4ty6aYER2eBu3aKajuBnn0uRDPMUD4gbObO04ih', '2021-04-01 14:34:13', ''),
-(9, '123', '$2y$10$JDmz0TsPStFoALd5kyXoSOklawuLO6hB39li5gLBVcF', '2021-04-01 14:48:01', ''),
-(10, '1234', '$2y$10$r3z5wExjQrcO3V5xj1tulub/YGQOkkcxwQBnqjTbwkW', '2021-04-01 14:49:20', ''),
-(11, 'roger', '$2y$10$2qCgvJf4v9dD2dEg9L60LuhMP1DSThAHzNgOGENa8Iy', '2021-04-01 14:56:19', ''),
-(12, '1234567', '$2y$10$TGSwKVSvQfx5XFjvgjLExeE5sepP6t/Kuvsg76mh.Q9', '2021-04-01 15:03:21', ''),
-(13, 'Cesar', '$2y$10$YO6U3TksdIAwr7ZuciBUSO5g7.QK8YRrbtrvJDrpiXv', '2021-04-02 16:25:18', ''),
-(14, 'Mariel', '$2y$10$DJMKQrAyNbxgVe3pZgikZew8YGxMi6oUasUKegtB5b1', '2021-04-02 18:01:05', ''),
-(15, 'April', '$2y$10$2GaWmf1Fdjw8sF.TxHPhFOp.w6cHoK2ktCdv67HhhYE', '2021-04-12 11:18:00', ''),
-(16, 'Mariel2', '$2y$10$cKMz/wXwICs.jill4/dD3.iLPYe0edgJM9YLByutxXT', '2021-05-11 08:27:56', ''),
-(17, 'Nurse Elvie', '$2y$10$DNYX5xUiV61uW/ZN4MYH4ehUNHfprbtK7Hk3f3ECkj2', '2021-05-11 17:03:59', '');
-
--- --------------------------------------------------------
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'MarielBachiller','$2y$10$UzRdPiYumYOh.fuleE.V1O3brm5NdQ7Yqn3wb22dVm0','2021-04-01 01:03:49',''),(2,'itantipolo','$2y$10$NPjoQTxM0X9bIAveJTcV1uJdrjd3m2spzvyeBuiRh27','2021-04-01 01:13:05',''),(3,'Ella','$2y$10$tveudBuAXiypoXKty86RFOIPnGBBfddPoiWDaQ3VsAA','2021-04-01 01:28:03',''),(4,'YHELBACHILLER','$2y$10$2vsnH9EKJQ/pAmRNXzTNKOjaBwxuj6S43vXmIM3eJds','2021-04-01 01:34:10',''),(5,'EllaMe','$2y$10$OA1P79moAw321hw3P.WFQ.bZ9t9apt8txZVTKDS7vuq','2021-04-01 01:51:55',''),(7,'Mariel1','$2y$10$vJ7TgkD4l12HA/WOu5ttdOA39AN5Vj50vDi6r4WOo.S','2021-04-01 02:58:55',''),(8,'AA123','$2y$10$Q2GL4ty6aYER2eBu3aKajuBnn0uRDPMUD4gbObO04ih','2021-04-01 06:34:13',''),(9,'123','$2y$10$JDmz0TsPStFoALd5kyXoSOklawuLO6hB39li5gLBVcF','2021-04-01 06:48:01',''),(10,'1234','$2y$10$r3z5wExjQrcO3V5xj1tulub/YGQOkkcxwQBnqjTbwkW','2021-04-01 06:49:20',''),(11,'roger','$2y$10$2qCgvJf4v9dD2dEg9L60LuhMP1DSThAHzNgOGENa8Iy','2021-04-01 06:56:19',''),(12,'1234567','$2y$10$TGSwKVSvQfx5XFjvgjLExeE5sepP6t/Kuvsg76mh.Q9','2021-04-01 07:03:21',''),(13,'Cesar','$2y$10$YO6U3TksdIAwr7ZuciBUSO5g7.QK8YRrbtrvJDrpiXv','2021-04-02 08:25:18',''),(14,'Mariel','$2y$10$DJMKQrAyNbxgVe3pZgikZew8YGxMi6oUasUKegtB5b1','2021-04-02 10:01:05',''),(15,'April','$2y$10$2GaWmf1Fdjw8sF.TxHPhFOp.w6cHoK2ktCdv67HhhYE','2021-04-12 03:18:00',''),(16,'Mariel2','$2y$10$cKMz/wXwICs.jill4/dD3.iLPYe0edgJM9YLByutxXT','2021-05-11 00:27:56',''),(17,'Nurse Elvie','$2y$10$DNYX5xUiV61uW/ZN4MYH4ehUNHfprbtK7Hk3f3ECkj2','2021-05-11 09:03:59','');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `visitor`
 --
 
+DROP TABLE IF EXISTS `visitor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `visitor` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `Agree` text NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
@@ -275,115 +142,32 @@ CREATE TABLE `visitor` (
   `Question5` varchar(30) NOT NULL,
   `q5txt` text NOT NULL,
   `Code` varchar(8) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `GuardName` varchar(50) NOT NULL,
-  `Body_Temp` varchar(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Body_Temp` varchar(5) NOT NULL,
+  `log_type` int(11) NOT NULL COMMENT '10 - scheduled; 20 - onsite;  30- wfh',
+  `type` int(11) NOT NULL COMMENT '10 - visitor; 20 employee',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=521 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `visitor`
 --
 
-INSERT INTO `visitor` (`id`, `Agree`, `last_name`, `first_name`, `Address`, `Email`, `Contact_Number`, `Gender`, `Department`, `person_to_visit`, `reason_to_visit`, `From_visit`, `To_visit`, `Question1`, `Question2`, `Question3`, `Question4`, `q4txt`, `Question5`, `q5txt`, `Code`, `created_at`, `GuardName`, `Body_Temp`) VALUES
-(319, '', 'Bachi', 'Ella', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0909090', 'Female', 'Finance', 'Ms. Leah', 'work', '07:00', '16:00', 'NO', 'NO', 'NO', 'No', '', 'Yes', '', '', '2021-05-09 17:28:25', '', '0'),
-(320, '', 'Bachi', 'Ella', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0909090909', 'Female', 'Finance', 'Ms. Leah', 'work', '07:00', '16:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-09 17:36:15', '', '0'),
-(321, '', 'test not', 'ssd', 'ssf', 'asdf@fasd.com', '5454545', 'Male', 'Finance', 'Ms. Leah', 'work', '07:00', '16:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-09 17:49:10', '', '0'),
-(322, '', 'dad', 'dad', 'dad', 'dsdds@rwrwrw', '445454', 'Male', 'IT', 'sdsd', 'sdsdsd', '07:00', '16:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-09 17:50:27', '?', '0'),
-(323, '', 'Bachi', 'Ella', '122232', 'ella@yahoo.com', '090909009', 'Female', 'Finance', 'Papi', 'asasas', '09:00', '10:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-10 11:03:27', 'ella', '34.6'),
-(324, '', 'Bachi', 'Ella', '122232', 'ella@yahoo.com', '090909009', 'Female', 'Finance', 'Papi', 'asasas', '09:00', '10:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-10 13:50:00', '', '0'),
-(326, '', 'Bachi', 'Ella1', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0912090909', 'Female', '', '', '', '', '', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-11 10:36:17', 'TINA', '34.6'),
-(327, '', 'Papi', 'papi', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0909090909', 'Male', 'Admission', 'asas', 'ass', '07:00', '16:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-11 11:19:38', 'ella', '32.5'),
-(328, '', 'pasp', 'skask', 'alsakslk', 'saksak@kjskj', '0909090', 'Male', 'IT', 'asas', 'asas', '13:00', '15:00', 'NO', 'NO', 'NO', 'No', '', 'Yes', '', '', '2021-05-11 11:22:13', 'yyyyyy', '34'),
-(329, '', 'Bachiller', 'Mariel', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '09090909090', 'Female', 'IT', 'asas', 'asas', '13:00', '15:00', 'NO', 'NO', 'NO', 'No', '', 'No', '', '', '2021-05-11 12:39:21', 'TINA', '34.6'),
-(330, '', 'Anadeo', 'Roger', '123 Bgy. Dela paz, Antipolo City', 'RAB@yahoo.com', '0912222390', 'Male', 'IT', 'asas', 'asas', '13:00', '15:00', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 12:45:32', '', ''),
-(331, '', 'Anadeo', 'Roger', '123 Bgy. Dela paz, Antipolo City', 'RAB@yahoo.com', '0912222390', 'Male', 'IT', 'asas', 'asas', '13:00', '15:00', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 12:50:01', '', ''),
-(332, '', 'Anadeo', 'Roger', '123 Bgy. Dela paz, Antipolo City', 'RAB@yahoo.com', '0912222390', 'Male', 'IT', 'asas', 'asas', '13:00', '15:00', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 12:51:42', '', ''),
-(333, '', 'test not', 'owiewoei', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0912232323', 'Female', 'Finance', 'You', 'Me', '', '', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 12:53:23', 'rt', '34.6'),
-(334, '', 'test not', 'owiewoei', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '0912232323', 'Female', 'Finance', 'You', 'Me', '', '', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 12:57:01', '', ''),
-(335, '', 'Gujelde', 'Ella', '123 Bgy. Dela paz, Antipolo City', 'ella@yahoo.com', '09123231223', 'Female', 'Admission', 'Ms. Leah', 'Work', '', '', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 15:14:14', 'rereer', '32.5'),
-(336, '', 'Lamayo', 'Ting', '122232', 'wewe@yAHOO.com', '092320932039', 'Female', 'IT', 'Papi', 'Workie', '13:00', '15:00', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 15:18:02', 'rerereer', '32.5'),
-(337, '', 'Bachi', 'Mariel', '', '', '', '', 'Finance', 'Ron', 'Werk', '', '', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-11 15:26:32', '', ''),
-(338, '', 'da', 'dads', '', '', '', '', 'Finance', 'sds', 'dsds', '07:00', '16:00', 'YES', '', '', '', '', '', '', '', '2021-05-14 20:03:48', '', ''),
-(342, '', 'Bachi', 'ew', '', '', '', '', 'Finance', 'ax', 'xzxz', '', '', 'YES', 'NO', 'NO', 'NO', '', '', '', '', '2021-05-14 20:07:34', '', ''),
-(343, '', 'Bachi', 'ew', '', '', '', '', 'Finance', 'ax', 'xzxz', '', '', 'YES', 'NO', 'NO', 'NO', '', '', '', '', '2021-05-14 20:13:45', '', ''),
-(344, '', 'Pedddd', 'RRRR', '', '', '', '', 'Finance', 'ssss', 'sldlksdl', '', '', 'YES', 'NO', 'NO', 'NO', '', '', '', '', '2021-05-14 20:14:37', '', ''),
-(345, '', 'Pedddd', 'RRRR', '', '', '', '', 'Finance', 'ssss', 'sldlksdl', '', '', 'NO', 'NO', 'NO', 'Yes', 'asasa', '', '', '', '2021-05-14 20:16:11', '', ''),
-(346, '', 'kj,,', 'lklkl', '', '', '', '', 'Admission', 'kjkjk', 'kjkkjk', '', '', 'YES', 'NO', 'NO', 'Yes', 'asasa', '', '', '', '2021-05-14 20:29:19', '', ''),
-(347, '', 'nkk', 'kjkjk', '', '', '', '', 'Finance', 'klkl', 'l;l;l', '', '', 'YES', '', '', '', '', '', '', '', '2021-05-14 20:36:58', '', ''),
-(348, '', 'Bachi', 'Ella', '', '', '', '', 'IT', 'rere', 'dfdffdfd', '', '', 'YES', '', '', '', '', '', '', '', '2021-05-14 21:29:05', '', ''),
-(349, '', 'Bachi', 'Ella', '', '', '', '', 'IT', 'rere', 'dfdffdfd', '', '', 'NO', 'NO', 'NO', 'Yes', 'sds', '', '', '', '2021-05-14 21:29:35', '', ''),
-(350, '', 'rere', 'rer', '', '', '', '', 'IT', 'dds', 'sdsds', '', '', 'YES', '', '', '', '', '', '', '', '2021-05-14 21:34:30', '', ''),
-(351, '', 'De Castro', 'Rhea', '', '', '', '', 'IT', 'Mariel', 'Visit', '', '', 'NO', 'YES', '', '', '', '', '', '', '2021-05-15 09:43:09', '', ''),
-(352, '', 'De Castro', 'Rhea', '', '', '', '', 'IT', 'Mariel', 'Visit', '', '', 'NO', 'YES', '', '', '', '', '', '', '2021-05-15 09:43:24', '', ''),
-(353, '', 'De Castro', 'Rhea', '', '', '', '', 'IT', 'Mariel', 'Visit', '', '', 'NO', 'NO', 'NO', 'NO', '', 'Yes', '', '', '2021-05-15 09:44:18', 'Tina Bachiller', '36'),
-(354, '', 'ass', 'assas', '', '', '', '', 'Finance', 'asa', 'sas', '07:00', '16:00', 'YES', '', '', '', '', '', '', '', '2021-05-17 09:13:47', '', ''),
-(355, '', 'Bachiller', 'Mariel', '', '', '', '', 'Admission', 'Ella', 'Workie', '07:00', '15:00', 'NO', 'YES', '', '', '', '', '', '', '2021-05-19 07:34:11', '', ''),
-(356, '', 'Bachiller', 'Mariel', '', '', '', '', 'IT', 'Ms. Leah', 'Work', '08:00', '16:00', 'YES', '', '', '', '', '', '', '', '2021-05-19 07:42:11', '', ''),
-(357, '', 'Bachiller', 'Mariel', '', '', '', '', 'Admission', 'Ella', 'Workie', '07:00', '15:00', 'NO', 'NO', 'NO', 'NO', '', 'No', '', '', '2021-05-19 07:44:35', 'Tina', '35.6'),
-(359, '', 'Bachiller', 'Ella', '', '', '', '', 'Finance', 'Ms. Leah', 'Workie', '', '', 'NO', 'YES', '', '', '', '', '', '', '2021-05-24 12:41:05', '', ''),
-(360, '', 'Bachiller', 'Ella', '', '', '', '', 'Finance', 'Ms. Leah', 'Workie', '', '', 'NO', 'YES', '', '', '', '', '', '', '2021-05-24 12:41:20', '', ''),
-(361, '', 'Bachiller', 'Ella', '', '', '', '', 'Finance', 'Ms. Leah', 'Workie', '', '', 'NO', 'YES', '', '', '', '', '', '', '2021-05-24 12:41:25', '', ''),
-(362, '', 'Bachiller', 'Ella', '', '', '', '', 'IT', 'Ella', 'Visit', '', '', 'NO', 'NO', 'NO', 'Yes', 'USA', '', '', '', '2021-05-24 18:18:28', '', ''),
-(363, '', 'Bachiller', 'Ella', '', '', '', '', 'IT', 'Ella', 'Visit', '', '', 'NO', 'NO', 'NO', 'Yes', 'USA', '', '', '', '2021-05-24 18:18:40', '', '');
+LOCK TABLES `visitor` WRITE;
+/*!40000 ALTER TABLE `visitor` DISABLE KEYS */;
+INSERT INTO `visitor` VALUES (319,'','Bachi','Ella','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0909090','Female','Finance','Ms. Leah','work','07:00','16:00','NO','NO','NO','No','','Yes','','','2021-05-09 09:28:25','','0',0,0),(320,'','Bachi','Ella','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0909090909','Female','Finance','Ms. Leah','work','07:00','16:00','NO','NO','NO','No','','No','','','2021-05-09 09:36:15','','0',0,0),(321,'','test not','ssd','ssf','asdf@fasd.com','5454545','Male','Finance','Ms. Leah','work','07:00','16:00','NO','NO','NO','No','','No','','','2021-05-09 09:49:10','','0',0,0),(322,'','dad','dad','dad','dsdds@rwrwrw','445454','Male','IT','sdsd','sdsdsd','07:00','16:00','NO','NO','NO','No','','No','','','2021-05-09 09:50:27','?','0',0,0),(323,'','Bachi','Ella','122232','ella@yahoo.com','090909009','Female','Finance','Papi','asasas','09:00','10:00','NO','NO','NO','No','','No','','','2021-05-10 03:03:27','ella','34.6',0,0),(324,'','Bachi','Ella','122232','ella@yahoo.com','090909009','Female','Finance','Papi','asasas','09:00','10:00','NO','NO','NO','No','','No','','','2021-05-10 05:50:00','','0',0,0),(326,'','Bachi','Ella1','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0912090909','Female','','','','','','NO','NO','NO','No','','No','','','2021-05-11 02:36:17','TINA','34.6',0,0),(327,'','Papi','papi','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0909090909','Male','Admission','asas','ass','07:00','16:00','NO','NO','NO','No','','No','','','2021-05-11 03:19:38','ella','32.5',0,0),(328,'','pasp','skask','alsakslk','saksak@kjskj','0909090','Male','IT','asas','asas','13:00','15:00','NO','NO','NO','No','','Yes','','','2021-05-11 03:22:13','yyyyyy','34',0,0),(329,'','Bachiller','Mariel','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','09090909090','Female','IT','asas','asas','13:00','15:00','NO','NO','NO','No','','No','','','2021-05-11 04:39:21','TINA','34.6',0,0),(330,'','Anadeo','Roger','123 Bgy. Dela paz, Antipolo City','RAB@yahoo.com','0912222390','Male','IT','asas','asas','13:00','15:00','NO','NO','NO','NO','','No','','','2021-05-11 04:45:32','','',0,0),(331,'','Anadeo','Roger','123 Bgy. Dela paz, Antipolo City','RAB@yahoo.com','0912222390','Male','IT','asas','asas','13:00','15:00','NO','NO','NO','NO','','No','','','2021-05-11 04:50:01','','',0,0),(332,'','Anadeo','Roger','123 Bgy. Dela paz, Antipolo City','RAB@yahoo.com','0912222390','Male','IT','asas','asas','13:00','15:00','NO','NO','NO','NO','','No','','','2021-05-11 04:51:42','','',0,0),(333,'','test not','owiewoei','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0912232323','Female','Finance','You','Me','','','NO','NO','NO','NO','','No','','','2021-05-11 04:53:23','rt','34.6',0,0),(334,'','test not','owiewoei','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','0912232323','Female','Finance','You','Me','','','NO','NO','NO','NO','','No','','','2021-05-11 04:57:01','','',0,0),(335,'','Gujelde','Ella','123 Bgy. Dela paz, Antipolo City','ella@yahoo.com','09123231223','Female','Admission','Ms. Leah','Work','','','NO','NO','NO','NO','','No','','','2021-05-11 07:14:14','rereer','32.5',0,0),(336,'','Lamayo','Ting','122232','wewe@yAHOO.com','092320932039','Female','IT','Papi','Workie','13:00','15:00','NO','NO','NO','NO','','No','','','2021-05-11 07:18:02','rerereer','32.5',0,0),(337,'','Bachi','Mariel','','','','','Finance','Ron','Werk','','','NO','NO','NO','NO','','No','','','2021-05-11 07:26:32','','',0,0),(338,'','da','dads','','','','','Finance','sds','dsds','07:00','16:00','YES','','','','','','','','2021-05-14 12:03:48','','',0,0),(342,'','Bachi','ew','','','','','Finance','ax','xzxz','','','YES','NO','NO','NO','','','','','2021-05-14 12:07:34','','',0,0),(343,'','Bachi','ew','','','','','Finance','ax','xzxz','','','YES','NO','NO','NO','','','','','2021-05-14 12:13:45','','',0,0),(344,'','Pedddd','RRRR','','','','','Finance','ssss','sldlksdl','','','YES','NO','NO','NO','','','','','2021-05-14 12:14:37','','',0,0),(345,'','Pedddd','RRRR','','','','','Finance','ssss','sldlksdl','','','NO','NO','NO','Yes','asasa','','','','2021-05-14 12:16:11','','',0,0),(346,'','kj,,','lklkl','','','','','Admission','kjkjk','kjkkjk','','','YES','NO','NO','Yes','asasa','','','','2021-05-14 12:29:19','','',0,0),(347,'','nkk','kjkjk','','','','','Finance','klkl','l;l;l','','','YES','','','','','','','','2021-05-14 12:36:58','','',0,0),(348,'','Bachi','Ella','','','','','IT','rere','dfdffdfd','','','YES','','','','','','','','2021-05-14 13:29:05','','',0,0),(349,'','Bachi','Ella','','','','','IT','rere','dfdffdfd','','','NO','NO','NO','Yes','sds','','','','2021-05-14 13:29:35','','',0,0),(350,'','rere','rer','','','','','IT','dds','sdsds','','','YES','','','','','','','','2021-05-14 13:34:30','','',0,0),(351,'','De Castro','Rhea','','','','','IT','Mariel','Visit','','','NO','YES','','','','','','','2021-05-15 01:43:09','','',0,0),(352,'','De Castro','Rhea','','','','','IT','Mariel','Visit','','','NO','YES','','','','','','','2021-05-15 01:43:24','','',0,0),(353,'','De Castro','Rhea','','','','','IT','Mariel','Visit','','','NO','NO','NO','NO','','Yes','','','2021-05-15 01:44:18','Tina Bachiller','36',0,0),(354,'','ass','assas','','','','','Finance','asa','sas','07:00','16:00','YES','','','','','','','','2021-05-17 01:13:47','','',0,0),(355,'','Bachiller','Mariel','','','','','Admission','Ella','Workie','07:00','15:00','NO','YES','','','','','','','2021-05-18 23:34:11','','',0,0),(356,'','Bachiller','Mariel','','','','','IT','Ms. Leah','Work','08:00','16:00','YES','','','','','','','','2021-05-18 23:42:11','','',0,0),(357,'','Bachiller','Mariel','','','','','Admission','Ella','Workie','07:00','15:00','NO','NO','NO','NO','','No','','','2021-05-18 23:44:35','Tina','35.6',0,0),(359,'','Bachiller','Ella','','','','','Finance','Ms. Leah','Workie','','','NO','YES','','','','','','','2021-05-24 04:41:05','','',0,0),(360,'','Bachiller','Ella','','','','','Finance','Ms. Leah','Workie','','','NO','YES','','','','','','','2021-05-24 04:41:20','','',0,0),(361,'','Bachiller','Ella','','','','','Finance','Ms. Leah','Workie','','','NO','YES','','','','','','','2021-05-24 04:41:25','','',0,0),(362,'','Bachiller','Ella','','','','','IT','Ella','Visit','','','NO','NO','NO','Yes','USA','','','','2021-05-24 10:18:28','','',0,0),(363,'','Bachiller','Ella','','','','','IT','Ella','Visit','','','NO','NO','NO','Yes','USA','','','','2021-05-24 10:18:40','','',0,0),(364,'','Bachiller','Mariel','','','','','Admission','Mariel','Work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:12:26','','',0,0),(365,'','Bachiller','Mariel','','','','','IT','Ms. Leah','work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:13:28','','',0,0),(366,'','Bachiller','Mariel','','','','','IT','Ms. Leah','work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:22:06','','',0,0),(367,'','Bachiller','Mariel','','','','','IT','Ms. Leah','work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:24:20','','',0,0),(368,'','Bachiller','Mariel','','','','','IT','Ms. Leah','work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:55:33','','',0,0),(369,'','Bachiller','Mariel','','','','','IT','Ms. Leah','work','','','NO','NO','NO','NO','','No','','','2021-05-28 08:56:53','','',0,0),(370,'','Bachi','Ella','','','','','IT','eeee','sssss','07:00','16:00','NO','NO','NO','NO','','No','','','2021-05-28 09:53:29','','',0,0),(371,'','Bachi','Ella','','','','','IT','Ms. Leah','Work','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:13:03','','',0,0),(372,'','Bachi','Ella','','','','','IT','Ms. Leah','Work','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:30:46','','',0,0),(373,'','Bachi','Ella','','','','','IT','Ms. Leah','Work','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:31:29','','',0,0),(374,'','Gujelde','ella','','','','','Admission','zx','zxz','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:32:18','','',0,0),(375,'','Gujelde','ella','','','','','Admission','zx','zxz','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:32:59','','',0,0),(376,'','sa','asa','','','','','Finance','asa','sas','','','NO','NO','NO','NO','','Yes','','','2021-06-08 02:36:19','','',0,0),(377,'','Bachiller','Ivon Mariel','','','','','0','','','07:00','16:00','NO','YES','NO','NO','','','','','2021-06-10 07:07:52','','',0,0),(378,'','eman','pereja','','','','','0','None','','','','NO','NO','NO','NO','','Yes','','','2021-06-10 07:19:07','','',0,0),(379,'','Catimbang','Leah','','','','','IT','IT Staff','Meeting','13:00','16:00','YES','','','','','','','','2021-06-10 07:19:32','','',0,0),(380,'','Catimbang','Leah','','','','','IT','IT Staff','Meeting','13:00','16:00','YES','','','','','','','','2021-06-10 07:19:59','','',0,0),(381,'','eman','pereja','','','','','Finance','None','Payment','','','NO','YES','NO','NO','','Yes','','','2021-06-10 07:20:57','','',0,0),(382,'','Catimbang','Leah','','','','','IT','IT Staff','Meeting','13:00','16:00','NO','NO','NO','','','','','','2021-06-10 07:21:08','','',0,0),(383,'','eman','pereja','','','','','Finance','None','Payment','','','NO','NO','NO','NO','','No','','','2021-06-10 07:21:20','','',0,0),(384,'','dsd','sdsd','','','','','Finance','sds','sdsd','','','NO','NO','NO','NO','','','','','2021-06-10 07:21:46','','',0,0),(385,'','eman','pereja','','','','','0','None','payment','','','NO','NO','NO','Yes','','No','','','2021-06-10 07:25:21','','',0,0),(386,'','eman','pereja','','','','','0','None','payment','','','NO','NO','NO','Yes','','No','','','2021-06-10 07:25:27','','',0,0),(387,'','eman','pereja','','','','','0','None','payment','','','NO','NO','NO','NO','','Yes','','','2021-06-10 07:25:41','','',0,0),(388,'','juan','dela Cruz','','','','','Admission','cecille','payment','07:00','16:00','YES','NO','NO','NO','','Yes','','','2021-06-10 07:27:16','','',0,0),(389,'','juan','dela Cruz','','','','','Admission','cecille','payment','07:00','16:00','NO','YES','NO','NO','','Yes','','','2021-06-10 07:28:01','','',0,0),(390,'','juan','dela Cruz','','','','','Admission','cecille','payment','07:00','16:00','NO','YES','NO','NO','','Yes','','','2021-06-10 07:28:57','','',0,0),(391,'','juan','dela Cruz','','','','','Admission','cecille','payment','07:00','16:00','NO','YES','NO','NO','','Yes','','','2021-06-10 07:29:05','','',0,0),(392,'','wd','sdsd','','','','','IT','sdsd','sdsd','','','NO','NO','YES','NO','','','','','2021-06-10 08:03:58','','',0,0),(393,'','wd','sdsd','','','','','IT','sdsd','sdsd','','','NO','NO','YES','NO','','','','','2021-06-10 08:05:55','','',0,0),(394,'','wd','sdsd','','','','','IT','sdsd','sdsd','','','NO','NO','YES','NO','','No','','','2021-06-10 08:06:13','','',0,0),(395,'','asdfasdf','asdfasdfasdf','','','','','','','','','','','','','','','','','','2021-06-19 07:29:22','','',30,0),(396,'','asdfasdf','asdfsdf','','','','','Admission','sdfsdfsd','sfdfsd','','','NO','NO','NO','NO','','No','','','2021-06-19 07:36:49','','',20,20),(397,'','sdasdfasd','asdfasdf','','','','','Admission','dfsd','asdfasd','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-19 07:40:12','','',10,20),(398,'','sdasdfasd','asdfasdf','safsdfa','ssdf@sdf.com','1','','Admission','dfasdfasd','asdfasdf','','','NO','NO','NO','NO','','No','','','2021-06-19 07:41:18','','',20,10),(399,'','Bahi','dsldk','','','','','','','','','','','','','','','','','','2021-06-19 12:07:02','','',30,0),(400,'','Bachi','Ella','','','','','','','','','','','','','','','','','','2021-06-19 12:10:16','','',30,0),(401,'','sdasdfasd','asdfasdf','safsdfa','ssdf@sdf.com','1','','Admission','dfasdfasd','asdfasdf','','','NO','NO','NO','NO','','No','','','2021-06-20 01:55:41','','',20,10),(402,'','try','me','','','','','Admission','dsds','dsdsds','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:09:12','','',10,20),(403,'','Eman','Pereja','','','','','','','','','','','','','','','','','','2021-06-21 01:12:54','','',30,0),(404,'','Eman','Pereja','','','','','0','','Work work','','','YES','','','','','','','','2021-06-21 01:14:19','','',20,20),(405,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:15:32','','',20,20),(406,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:15:53','','',20,20),(407,'','Eman','Pereja','','','','','Admission','Rochelle','Inquiry ','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:17:50','Testing','36.2',10,20),(408,'','Eman','Pereja','','','','','Admission','Rochelle','Inquiry ','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:17:57','','',10,20),(409,'','Eman','Pereja','','','','','Admission','Rochelle','Inquiry ','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:17:58','','',10,20),(410,'','Eman','Pereja','','','','','Admission','Rochelle','Inquiry ','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:17:59','','',10,20),(411,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:34:40','','',20,20),(412,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:34:47','','',20,20),(413,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:34:48','','',20,20),(414,'','Eman','Pereja','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:34:49','','',20,20),(415,'','fsf','fsf','','','','','Finance','daadaad','ada','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:39:57','','',10,20),(416,'','Gallana','Joseph Godfrey','','','','','IT','Eman Pereja','Testing','','','NO','NO','NO','NO','','No','','','2021-06-21 01:44:47','','',20,20),(417,'','Maglente','Ma. Cherry','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:45:46','','',20,20),(418,'','Maglente','Ma. Cherry','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 01:46:11','','',20,20),(419,'','sds','dsds','','','','','IT','Ms. Leah','Chickahan ','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 01:51:54','','',10,20),(420,'','Gallana','Joseph Godfrey','','','','','IT','Eman Pereja','Testing','','','NO','NO','NO','NO','','No','','','2021-06-21 01:53:24','','',20,20),(421,'','Matienzo','Andrew','','','','','','','','','','','','','','','','','','2021-06-21 02:03:51','','',30,0),(422,'','Bachiller','Mariel','','','','','','','','','','','','','','','','','','2021-06-21 02:03:57','','',30,0),(423,'','Bachiller','Mariel','','','','','','','','','','','','','','','','','','2021-06-21 02:04:41','','',30,0),(424,'','Matienzo','Andrew','','','','','IT','Gallana Godfrey','Mtb','','','NO','NO','NO','NO','','No','','','2021-06-21 02:05:20','Testing','36.2',20,20),(425,'','Matienzo','Andrew','','','','','IT','Gallana Butch','Trinx','07:00','16:00','NO','NO','NO','NO','','Yes','','','2021-06-21 02:10:03','','',10,20),(426,'','Matienzo','Andrew','','','','','IT','Gallana Butch','Trinx','07:00','16:00','NO','NO','NO','NO','','Yes','','','2021-06-21 02:10:21','','',10,20),(427,'','Matienzo','Andrew','','','','','IT','Gallana Butch','Trinx','07:00','16:00','NO','NO','NO','NO','','Yes','','','2021-06-21 02:10:26','','',10,20),(428,'','Dominador','Pereja jr','','','','','Admission','Rochelle','Inquiry','08:00','13:00','NO','NO','NO','NO','','No','','','2021-06-21 04:02:10','Testing','36.2',10,20),(429,'','Dominador','Pereja jr','','','','','Admission','Rochelle','Inquiry','08:00','13:00','NO','NO','NO','NO','','No','','','2021-06-21 04:02:16','','',10,20),(430,'','Baylas','Florence Irena','','','','','','','','','','','','','','','','','','2021-06-21 04:25:00','','',30,0),(431,'','Baylas','Florence Irena','','','','','LRC','Miss Tersie','return books','','','YES','','','','','','','','2021-06-21 04:27:32','','',20,20),(432,'','Baylas','Florence Irena','','','','','LRC','Miss Tersie','return books','','','YES','','','','','','','','2021-06-21 04:27:39','','',20,20),(433,'','Baylas','Florence Irena','','','','','Admission','Miss Tersie','secret','','','NO','NO','NO','NO','','Yes','','','2021-06-21 04:31:08','','',20,20),(434,'','Baylas','Florence Irena','','','','','IT','Sir Emman','health checklist','07:00','16:00','NO','NO','NO','NO','','Yes','','','2021-06-21 04:34:03','','',10,20),(435,'','Carpizo','Lanie','','','','','Finance','La','P','09:00','14:00','NO','NO','NO','NO','','No','','','2021-06-21 06:07:56','','',10,20),(436,'','Carpizo','Lanie','','','','','Finance','La','P','09:00','14:00','NO','NO','NO','NO','','No','','','2021-06-21 06:08:15','','',10,20),(437,'','Carpizo','Lanie','','','','','Finance','La','P','09:00','14:00','NO','NO','NO','NO','','No','','','2021-06-21 06:08:16','','',10,20),(438,'','Carpizo','Lanie','','','','','Finance','La','P','09:00','14:00','NO','NO','NO','NO','','No','','','2021-06-21 06:08:17','','',10,20),(439,'','Carpizo','Lanie','','','','','Finance','La','P','09:00','14:00','NO','NO','NO','NO','','No','','','2021-06-21 06:08:18','','',10,20),(440,'','Carpizo','Lanie','','','','','Admission','K','H','','','YES','NO','NO','NO','','No','','','2021-06-21 06:12:41','','',20,20),(441,'','I','B','','','','','Admission','N','H','07:00','16:00','YES','NO','NO','NO','','No','','','2021-06-21 06:13:28','','',10,20),(442,'','H','G','','','','','','','','','','','','','','','','','','2021-06-21 06:14:30','','',30,0),(443,'','dsd','dsd','','','','','0','','','','','NO','NO','NO','NO','','No','','','2021-06-21 06:21:35','','',20,20),(444,'','Vachi','Ch','','','','','Finance','Ms. Cez','Payment','','','NO','NO','NO','NO','','No','','','2021-06-21 06:28:30','','',20,20),(445,'','Bachiller','d;dl','','','','','','','','','','','','','','','','','','2021-06-21 06:34:59','','',30,0),(446,'','chi','sdjdisj','','','','','','','','','','','','','','','','','','2021-06-21 08:43:52','','',30,0),(447,'','sd;l','s;dlsl','','','','','','','','','','','','','','','','','','2021-06-21 08:46:11','','',30,0),(448,'','sdsd','sds','','','','','','','','','','','','','','','','','','2021-06-21 08:47:55','','',30,0),(449,'','saasa','sasa','','','','','sd','sdsds','sdsd','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-21 09:37:02','','',10,20),(450,'','chi','Ella','','','','','LRC','Ms. Terz','Return books','','','NO','NO','NO','NO','','No','','','2021-06-21 09:39:26','','',20,20),(451,'','chi','Ella','','','','','LRC','Ms. Terz','Return books','','','NO','NO','NO','NO','','No','','','2021-06-21 09:40:25','','',20,20),(452,'','chi','Ella','','','','','LRC','Ms. Terz','Return books','','','NO','NO','NO','NO','','No','','','2021-06-21 09:41:27','','',20,20),(453,'','chi','Ella','','','','','LRC','Ms. Terz','Return books','','','NO','NO','NO','NO','','No','','','2021-06-21 09:41:29','','',20,20),(454,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:43','','',0,0),(455,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:46','','',0,0),(456,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:47','','',0,0),(457,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:49','','',0,0),(458,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:51','','',0,0),(459,'','','','','','','','','','','','','','','','','','','','','2021-06-22 08:43:53','','',0,0),(460,'','sdssdsd','sds','sdsd','ella@sdklsldkl.c','99909','','','','','07:00','16:00','NO','YES','','','','','','','2021-06-23 01:45:34','','',10,10),(461,'','as','sas','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 01:47:36','','',20,20),(462,'','as','sas','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 01:48:32','','',20,20),(463,'','ccz','czc','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 04:18:07','','',10,20),(464,'','ccz','czc','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 04:19:24','','',10,20),(465,'','ccz','czc','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 04:19:34','','',10,20),(466,'','ccz','czc','','','','','asasaa','xcx','asas','','','YES','','','','','','','','2021-06-23 04:30:07','','',10,20),(467,'','','','','','','','','','','','','','','','','','','','','2021-06-23 08:05:20','','',0,0),(468,'','','','','','','','','','','','','','','','','','','','','2021-06-23 08:05:36','','',0,0),(469,'','','','','','','','','','','','','','','','','','','','','2021-06-23 23:11:03','','',0,0),(470,'','','','','','','','','','','','','','','','','','','','','2021-06-23 23:11:05','','',0,0),(471,'','','','','','','','','','','','','','','','','','','','','2021-06-23 23:11:07','','',0,0),(472,'','','','','','','','','','','','','','','','','','','','','2021-06-23 23:11:09','','',0,0),(473,'','','','','','','','','','','','','','','','','','','','','2021-06-23 23:11:11','','',0,0),(474,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:49:59','','',0,0),(475,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:50:02','','',0,0),(476,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:50:04','','',0,0),(477,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:52:22','','',0,0),(478,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:52:24','','',0,0),(479,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:52:26','','',0,0),(480,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:52:39','','',0,0),(481,'','','','','','','','','','','','','','','','','','','','','2021-06-24 00:52:45','','',0,0),(482,'','','','','','','','','','','','','','','','','','','','','2021-06-24 02:12:17','','',0,0),(483,'','Matienzo','Andrew','','','','','IT','Andrew','Wfs','','','NO','NO','NO','NO','','No','','','2021-06-25 00:33:15','','',20,20),(484,'','Eman','Pereja','','','','','','','','','','','','','','','','','','2021-06-25 00:33:15','','',30,0),(485,'','Catimbang','Leah','','','','','','','','','','','','','','','','','','2021-06-25 00:33:32','','',30,0),(486,'','Eman','Pereja','','','','','Ict','','','','','YES','','','','','','','','2021-06-25 00:33:58','','',20,20),(487,'','Eman','Pereja','','','','','Ict','Sir. Andrew','Repair of laptop','08:00','15:00','NO','NO','NO','NO','','No','','','2021-06-25 00:35:08','','',10,20),(488,'','Matienzo','Andrew','','','','','IT','Andrew','Wfs','','','NO','NO','NO','NO','','No','','','2021-06-25 00:35:48','','',20,20),(489,'','sd;slds;','s;ds;','','','','','','','','','','','','','','','','','','2021-06-25 00:51:35','','',30,0),(490,'','Bachi','Ela','','','','','','','','','','','','','','','','','','2021-06-25 00:54:35','','',30,0),(491,'','Bachi','Ella','','','','','','','','','','','','','','','','','','2021-06-25 00:55:12','','',30,0),(492,'','Bachi','Ella','','','','','','','','','','','','','','','','','','2021-06-25 01:46:16','','',30,0),(493,'','Bachiller','Mariel','','','','','','','','','','','','','','','','','','2021-06-25 02:56:40','','',30,0),(494,'','Eriman','Jenny','','','','','','','','','','','','','','','','','','2021-06-27 23:47:22','','',30,0),(495,'','Baylas','Florence Irena','','','','','','','','','','','','','','','','','','2021-06-28 01:18:07','','',30,0),(496,'','Baylas','Florence Irena','','','','','Clinic','a','a','','','NO','NO','NO','NO','','No','','','2021-06-28 01:18:52','','',20,20),(497,'','Alarcon','Elvie','','','','','Clinic','Elvie','Work','','','NO','NO','NO','NO','','Yes','','','2021-06-28 01:19:09','','',20,20),(498,'','Baylas','Florence Irena','','','','','Clinic','aa','a','07:00','16:00','YES','NO','NO','NO','','No','','','2021-06-28 01:19:24','','',10,20),(499,'','Baylas','Florence Irena','','','','','Clinic','a','a','07:00','16:00','NO','NO','NO','Yes','a','No','','','2021-06-28 01:20:22','','',10,20),(500,'','Baylas','Florence Irena','','','','','Clinic','a','a','07:00','16:00','NO','NO','NO','NO','','No','','','2021-06-28 01:20:51','','',10,20),(501,'','Alarcon','Elvie','','','','','Clinic','Elvie','Visit','07:00','16:00','NO','NO','NO','Yes','','Yes','','','2021-06-28 01:20:54','','',10,20),(502,'','E','E','','','','','V','V','B','07:00','16:00','YES','NO','NO','Yes','','Yes','','','2021-06-28 01:21:28','','',10,20),(503,'','F','V','','','','','','','','','','','','','','','','','','2021-06-28 01:21:56','','',30,0),(504,'','V','B','','','','','','','','','','','','','','','','','','2021-06-28 01:22:20','','',30,0),(505,'','B','N','','','','','','','','','','','','','','','','','','2021-06-28 01:22:38','','',30,0),(506,'','V','V','','','','','','','','','','','','','','','','','','2021-06-28 01:23:30','','',30,0),(507,'','Baylas','Florence Irena','','','','','','','','07:00','16:00','NO','NO','NO','NO','','Yes','','','2021-06-28 01:23:40','','',10,20),(508,'','B','B','','','','','','','','','','','','','','','','','','2021-06-28 01:23:45','','',30,0),(509,'','N','N','','','','','','','','','','','','','','','','','','2021-06-28 01:24:01','','',30,0),(510,'','Baylas','Florence Irena','60A Granada St','atutubomd@yahoo.com','94930103022','','','','','','','NO','NO','NO','NO','','No','','','2021-06-28 02:20:55','','',20,10),(511,'','Baylas','Florence Irena','60A Granada St','atutubomd@yahoo.com','94930103022','','','','','','','YES','NO','NO','NO','','No','','','2021-06-28 02:21:27','','',20,20),(512,'','','','','','','','','','','','','','','','','','','','','2021-06-28 05:31:08','','',0,0),(513,'','Matienzo','Andrew','','','','','IT','','Wfs','','','NO','NO','NO','NO','','Yes','','','2021-06-29 00:02:00','','',20,20),(514,'','Matienzo','Andrew','','','','','IT','','Wfs','','','NO','NO','NO','NO','','Yes','','','2021-06-29 00:02:13','','',20,20),(515,'','xcxc','cxcx','','','','','xss','sdsds','dsd','','','NO','NO','NO','NO','','No','','','2021-06-29 01:00:28','','',20,20),(516,'','Bachiller','Mariel','','','','','IT','Ms. Leah','Work','','','NO','NO','NO','NO','','Yes','','','2021-06-29 01:15:57','','',20,20),(517,'','Catimbang','Leah','','','','','','','','','','','','','','','','','','2021-06-29 01:20:13','','',30,0),(518,'','Bachi','Ella','Chxjxbc','s@chdjd.con','8338374','','Finance','Ms. Cez','Report card','','','NO','NO','NO','NO','','No','','','2021-06-29 02:41:15','Tina','37.6',20,10),(519,'','Bachi','Ella','Chxjxbc','s@chdjd.con','8338374','','Finance','Ms. Cez','Report card','','','NO','NO','NO','NO','','No','','','2021-06-29 02:41:30','','',20,10),(520,'','Bachi','Ella','Chxjxbc','s@chdjd.con','8338374','','Finance','Ms. Cez','Report card','','','NO','NO','NO','NO','','No','','','2021-06-29 02:41:38','','',20,10);
+/*!40000 ALTER TABLE `visitor` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `abc`
---
-ALTER TABLE `abc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `gender`
---
-ALTER TABLE `gender`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- Indexes for table `visitor`
---
-ALTER TABLE `visitor`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `abc`
---
-ALTER TABLE `abc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `gender`
---
-ALTER TABLE `gender`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `visitor`
---
-ALTER TABLE `visitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=364;
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-06-29 11:04:56

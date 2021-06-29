@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Assumption Antipolo";
 include "common/header.php";
-$_SESSION["type"] = "20";
+$_SESSION["type"] = 20;
 ?>
 <div class="panel-body">
     <p style="font-size:30px"> <center> <h1> <u>Online Health Declaration Form</u></h1>

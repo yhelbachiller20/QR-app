@@ -12,6 +12,6 @@ function yesnoCheck() {
 }
 </script>
           <div class="panel-body">
-            <h1>Not Allowed</h1>
+            <h1>Not Allowed</h1> 	
   </div>
 <?php include "common/footer.php";?>
