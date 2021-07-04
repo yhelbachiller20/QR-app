@@ -1,4 +1,5 @@
-<?php $pageTitle = "Health Checklist";
+<?php
+$pageTitle = "Health Checklist";
 include "common/header.php";
 ?>
 <?php include 'script/hc1-model.php'; ?>
@@ -30,7 +31,7 @@ include "common/header.php";
     <form action="" method="post">
         <input type="submit" class="btn btn-warning" name="btnYes" value="Yes" style="float:left;padding-left: 7px;margin-left: 13px;margin-right: 0px;">
         <input type="submit" class="btn btn-primary" name="btnNo" value="No" style="float:right;margin-right: 13px;">
-        <input type="hidden" name="log_type" value="<?php echo $_GET['log_type']; ?>"/>
+        <input type="hidden" name="log_type" value="<?php echo isset($_GET['log_type']) ? $_GET['log_type'] : ""; ?>"/>
     </form>
 
 

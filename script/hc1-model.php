@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['log_type']) && !empty($_POST['log_type'])) {
-    $_SESSION['log_type'] = 30;
+    $_SESSION['log_type'] = $_POST['log_type'];
 }
 if (isset($_POST['btnNo'])) {
 //gawin dito ang back
