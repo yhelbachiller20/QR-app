@@ -3,6 +3,9 @@
 <?php include "common/connect.php" ?>
 <?php include "script/DateTImeHelper.php" ?>
 <?php
+if (!isset($_COOKIE['user'])) {
+    header("Location: admin_login.php?id=" . $_GEt['id']);
+}
 $sql = "SELECT * FROM visitor WHERE SHA1(id) = '" . $_GET['id'] . "'";
 $result = $conn->query($sql);
 $visitor = [];
@@ -68,7 +71,8 @@ $hours = $hours + ($interval->days * 24);
             <label>Body Temp:&nbsp  </label> <input type="text" name="txtBodyTemp"  placeholder="--.-">    
             <div class="form-group"><br>
                 <b> Guard Name:</b>
-                <input type="text" name="txtGuardName" placeholder="Guard Name">
+                <span><?php echo $_COOKIE['user']; ?></span>
+                <input type="hidden" value="<?php echo $_COOKIE['user']; ?>" name="txtGuardName" placeholder="Guard Name">
                 <br>
                 <br>
                 <input type="submit" class="btn btn-primary" name="btnbodyTemp" value="Submit">	
