@@ -8,13 +8,13 @@ include "script/admin_login_model.php";
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . $id; ?>" method="post">
     <div class="form-group">
         <label>Username</label>
-        <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+        <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+
     </div>    
     <div class="form-group">
         <label>Password</label>
-        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"/>
-        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        <input type="password" name="password" class="form-control"/>
+
     </div>
     <div class="form-group">
         <input type="submit" name="btn_submit" class="btn btn-primary" value="Login">
