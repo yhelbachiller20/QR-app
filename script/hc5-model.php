@@ -7,8 +7,8 @@ if (isset($_POST['choices'])) {
         $noChoiceSelected = "Please Select One.";
     } else {
 
-        $_SESSION['hc5'] = ['Question5' => $_POST["yesno"], 'q5txt' => $_POST["yesTxt"]];
-if(!isset($_SESSION["log_type"])){
+        $_SESSION['hc5'] = ['Question5' => $_POST["yesno"], 'q5txt' => $_POST["yesText"]];
+if($_SESSION["log_type"]==30){
         $url = $config["url_base"] . 'wfh.php';
 }else{
         $url = $config["url_base"] . 'validation1.php';
