@@ -4,7 +4,7 @@
 <?php include "script/DateTImeHelper.php" ?>
 <?php
 if (!isset($_COOKIE['user'])) {
-    header("Location: admin_login.php?id=" . $_GEt['id']);
+    header("Location: admin_login.php?id=" . $_GET['id']);
 }
 $sql = "SELECT * FROM visitor WHERE SHA1(id) = '" . $_GET['id'] . "'";
 $result = $conn->query($sql);

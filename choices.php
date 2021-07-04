@@ -12,9 +12,9 @@ include "common/header.php";
             <a href="Schedule.php" class="btn btn-warning ml-3">By Schedule</a> <br><br>
             <a href="Onsite.php" class="btn btn-warning ml-3">&nbsp Onsite &nbsp</a> <br><br>
             <?php if ($_SESSION["type"] == 20) { ?>
-                <a href="hc1.php" class="btn btn-warning ml-3">&nbsp Work From Home &nbsp</a>
-<?php } ?>
+                <a href="hc1.php?log_type=30" class="btn btn-warning ml-3">&nbsp Work From Home &nbsp</a>
+            <?php } ?>
             </p>        
         </center>
     </div>
-<?php include "common/footer.php"; ?>
+    <?php include "common/footer.php"; ?>

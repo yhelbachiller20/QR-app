@@ -41,7 +41,7 @@ function redirecToIndex($type) {
     if ($type == 10) {
         //clinic view
         header("Location: index_clinic.php");
-    } elseif (v == 20) {
+    } elseif ($type == 20) {
         //guard view
         header("Location: index_guard.php");
     }
