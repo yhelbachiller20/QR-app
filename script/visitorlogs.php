@@ -11,8 +11,6 @@
 	  $Email ="";
 	  $Contact_Number ="";
 	  $Gender ="";
-
-
 	if(isset($_POST['btnNext'])){
 		if(empty($_POST['last_name'])){
 			$lastname_error="Required";

@@ -8,12 +8,13 @@ if (isset($_POST['choices'])) {
     } else {
 
         $_SESSION['hc5'] = ['Question5' => $_POST["yesno"], 'q5txt' => $_POST["yesTxt"]];
-        if ($_POST["yesno"] == "Yes") {
-            $url = $config["url_base"] . 'validation1.php';
+if(!isset($_SESSION["log_type"])){
+        $url = $config["url_base"] . 'wfh.php';
+}else{
+        $url = $config["url_base"] . 'validation1.php';
+}
+
+
             header('Location: ' . $url);
-        } else {
-            $url = $config["url_base"] . 'validation1.php';
-            header('Location: ' . $url);
-        }
     }
 }

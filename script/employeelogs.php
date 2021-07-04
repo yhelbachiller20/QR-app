@@ -2,7 +2,6 @@
 	  $lastname_error = "";
 	  $firstname_error =""; 
   $lastname = $firstname ="";
-
   if(isset($_POST['btnNext'])) {
     if (empty($_POST["last_name"])) {
     $lastname_error = "Required";

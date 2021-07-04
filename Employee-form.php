@@ -1,19 +1,19 @@
 <?php $pageTitle = 'Please  fill out this'. "<br>".'Health Declaration form properly. '; ?>
 <?php 
 include 'common/header.php';
-include 'script/Employeelogs.php';
+include 'script/employeelogs.php';
 
 ?>
 
 <form action="" method="post">
           <div class="form-group"><br />
 			 <label>&nbsp &nbsp Last Name:</label>
-                <input type="text" name="last_name" class="form-control"  placeholder="Lastname">
+                <input type="text" name="last_name" class="form-control"  placeholder="Last Name">
 				*<?php echo $lastname_error;?>
             </div> 
 			<div class="form-group">
                 <label> &nbsp &nbsp First Name:</label>
-                <input type="text" name="first_name" class="form-control"  placeholder="Firstname">
+                <input type="text" name="first_name" class="form-control"  placeholder="First Name">
 				*<?php echo $firstname_error;?>
             </div> 
 				

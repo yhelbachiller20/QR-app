@@ -32,7 +32,7 @@
 				<input type="time" name="timeTo" value="16:00" max="16:00">
 			  <br>
 			  <br>
-			<p>"Please limit visit to 2 hours (maximum) only"</p> 
+			<p>Please limit visit to 2 hours (maximum) only</p> 
 			</center>
 			<input type="submit" class="btn btn-primary" name="schedNext" value="Next" style="float:right;margin-right: 13px;">
 			</form>

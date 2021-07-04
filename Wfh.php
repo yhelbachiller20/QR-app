@@ -2,6 +2,7 @@
 $pageTitle = "<h2>Work From Home &nbsp &nbsp</h2> <h3>Please Input your Body Temperature</h3>";
 include "common/header.php";
 include "script/wfh-model.php";
+$_SESSION['log_type'] = 30;
 ?>
 <form action="" method="POST">
 

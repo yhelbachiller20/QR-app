@@ -8,7 +8,7 @@ include "script/admin_login_model.php";
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . $id; ?>" method="post">
     <div class="form-group">
         <label>Username</label>
-        <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+        <input type="text" name="username" class="form-control"/>
 
     </div>    
     <div class="form-group">

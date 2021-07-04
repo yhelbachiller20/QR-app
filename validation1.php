@@ -4,6 +4,7 @@
 <?php include "common/header.php"; ?>
 <?php include "common/connect.php"; ?>
 <?php include "script/session_to_db.php"; ?>
+
 <script type="text/javascript">
     window.history.forward();
     function noBack()
@@ -11,7 +12,6 @@
         window.history.forward();
     }
 </script>
-
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
     <div class="panel-body"><center>
       <!--      <?php echo $keyHash; ?> -->

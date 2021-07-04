@@ -4,12 +4,18 @@
 <?php include "common/header.php";?>
 <?php include "common/connect.php";?>
 <?php include "script/session_to_db.php";?>
-<script>
-window.location.hash="no-back-button";
-window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
-window.onhashchange=function(){window.location.hash="no-back-button";}
-</script> 
 
+<?php
+var_dump($dataToStore['log_type']);
+//$x = $_SESSION["log_type"]=30;
+//$y = $_SESSION["log_type"]=20;
+//var_dump($x !== $y);
+if
+($dataToStore['log_type'] ){
+echo "Please inform the clinic of your symptoms and consult your physician. Thank you.";
+}
+else{
+echo  "We apologize but you are not allowed to proceed and enter the Assumption Antipolo premises. This is In line with the health protocols of the school.";
+}
 
-<script type="text/javascript"> alert("We apologize but you are not allowed to proceed and enter the Assumption Antipolo premises. This is In-line with the health protocols of the school.")</script>
-
+?>

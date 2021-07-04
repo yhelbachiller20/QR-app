@@ -1,7 +1,7 @@
 <?php $pageTitle ="Safety Reminders";?>
 <?php include "common/header.php"; ?>
 			<div class="panel-body"><center>
-				<img src= "./safety3.png" style="max-width:100%;height:110;">
+				<img src= "./safety.jpg" style="max-width:100%;height:110;">
 				<br>
 				<center>
 				<br>

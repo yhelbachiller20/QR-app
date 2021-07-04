@@ -26,7 +26,7 @@
 				date_default_timezone_set("Singapore") . "<br>";
 				echo "The time is " . date("h:i:sa");
 				?>
-			<p>"Please limit visit to 2 hours (maximum) only"</p> 
+			<p>Please limit visit to 2 hours (maximum) only</p> 
 			<br>
 			  <br>
 			  <br>

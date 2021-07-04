@@ -10,7 +10,7 @@ include "common/header.php";
         <p>
         <center>
             <a href="Schedule.php" class="btn btn-warning ml-3">By Schedule</a> <br><br>
-            <a href="Onsite.php" class="btn btn-warning ml-3">&nbsp Onsite &nbsp</a> <br><br>
+            <a href="Onsite.php" class="btn btn-warning ml-3">&nbsp On-site &nbsp</a> <br><br>
             <?php if ($_SESSION["type"] == 20) { ?>
                 <a href="hc1.php?log_type=30" class="btn btn-warning ml-3">&nbsp Work From Home &nbsp</a>
             <?php } ?>
