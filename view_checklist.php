@@ -29,10 +29,10 @@ $hours = $hours + ($interval->days * 24);
 <?php if ($hours <= 8 || $isOnsite) { ?>
     <center>
         <h1><?php echo $visitor['first_name'] . ' ' . $visitor['last_name']; ?></h1>
-        <table style="width:60%">
-            <tr>
-                <th>Gender:</th>
-                <td>  <?php echo $visitor['Gender']; ?> </td>
+        <table style="width:60%">  
+			<tr>              
+				<th>Gender:</th>
+                <td> <?php echo $visitor['Gender'];?></td>
             </tr>	
             <tr>
                 <td><b>Date of visit:</b></td>

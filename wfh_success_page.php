@@ -6,7 +6,7 @@ unset($_SESSION['employee']);
 <center>
 <h1>Body temperature input Successfully saved.</h1>
 <p>Stay Safe and healthy!</p>
-	<form action="Employee.php" method="post">
+	<form action="completed.php" method="post">
                 <input type="submit" name="ok" value="ok">
             </form>
 </center>

@@ -49,5 +49,5 @@ if ((!isset($_SESSION['visitor']) && !isset($_SESSION['employee'])) && strpos($_
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <img src="AA.png" id="AA" style="width:70px;height:70px;">
-                        <h2 class="text-center"><?php echo $pageTitle; ?></h2>
+                        <h3 class="text-center"><?php echo $pageTitle; ?></h3>
                     </div>

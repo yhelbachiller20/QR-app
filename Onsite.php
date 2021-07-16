@@ -7,14 +7,14 @@
 	<br><center>
 		<form action="" method="post">
 		<div class="form-group">
-                  <label> Area/s or Department/s to Visit:</label>
-                <input type="text" name="Department" placeholder="Place to visit">
+                  <label> Area/s or Department/s or Unit/s to Visit:</label>
+                <input type="text" name="Department" <?php if ($_SESSION["type"] == 10) { ?> placeholder="Name of Person to visit"> <?php }?>
             </div>
 			<br>
 			<br>
 			<div class="form-group">
                 <label> Person to Visit:</label>
-                <input type="text" name="person" placeholder="Name of Person to visit">
+                <input type="text" name="person" <?php if ($_SESSION["type"] == 10) { ?> placeholder="Name of Person to visit"> <?php }?>
             </div>
 				<div class="form-group">
                 <label> Reason for Visit:</label><br>
@@ -26,7 +26,8 @@
 				date_default_timezone_set("Singapore") . "<br>";
 				echo "The time is " . date("h:i:sa");
 				?>
-			<p>Please limit visit to 2 hours (maximum) only</p> 
+		<?php if ($_SESSION["type"] == 10) { ?>
+			<p>Please limit visit to 2 hours (maximum) only.</p>   <?php } ?>
 			<br>
 			  <br>
 			  <br>

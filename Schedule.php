@@ -7,14 +7,14 @@
 <br><center>
 		<form action="" method="post">
 		<div class="form-group">
-                <label> Area/s or Department/s to Visit:</label>
-                <input type="text" name="Department" placeholder="Place to visit">
+                  <label> Area/s or Department/s or Unit/s to Visit:</label>
+                <input type="text" name="Department" <?php if ($_SESSION["type"] == 10) { ?> placeholder="Place to visit"> <?php }?> 
             </div>
 			<br>
 			<br>
 			<div class="form-group">
                 <label> Person to Visit:</label>
-                <input type="text" name="person" placeholder="Name of Person to visit">
+                <input type="text" name="person" <?php if ($_SESSION["type"] == 10) { ?> placeholder="Name of Person to visit"> <?php }?>
             </div>
 				<div class="form-group">
                 <label> Reason for Visit:</label><br>
@@ -32,7 +32,8 @@
 				<input type="time" name="timeTo" value="16:00" max="16:00">
 			  <br>
 			  <br>
-			<p>Please limit visit to 2 hours (maximum) only</p> 
+				<?php if ($_SESSION["type"] == 10) { ?>
+			<p>Please limit visit to 2 hours (maximum) only.</p>   <?php } ?>
 			</center>
 			<input type="submit" class="btn btn-primary" name="schedNext" value="Next" style="float:right;margin-right: 13px;">
 			</form>
