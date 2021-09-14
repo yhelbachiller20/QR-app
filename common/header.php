@@ -16,7 +16,7 @@ if ((!isset($_SESSION['visitor']) && !isset($_SESSION['employee'])) && strpos($_
 <html lang="en">
     <?php include "config.php"; ?>
     <head>
-        <title><?php echo $pageTitle; ?></title>
+    <title><?php echo $pageTitle; ?></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-swidth, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -49,5 +49,5 @@ if ((!isset($_SESSION['visitor']) && !isset($_SESSION['employee'])) && strpos($_
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <img src="AA.png" id="AA" style="width:70px;height:70px;">
-                        <h3 class="text-center"><?php echo $pageTitle; ?></h3>
+                        <h3 class="text-center" style="padding-right: 43px;"><?php echo $pageTitle; ?></h3>
                     </div>

@@ -1,4 +1,4 @@
-<?php $pageTitle = 'Please  fill out this'. "<br>".'Health Declaration form properly. '; ?>
+<?php $pageTitle = 'Information Details'; ?>
 <?php 
 include 'config.php';
 include 'common/header.php';
@@ -11,20 +11,51 @@ if ($result->num_rows > 0) {
  
   $row = $result->fetch_assoc();
   ?>
-  <h1>Visitor Details</h1>
+   <?php 
+			if ($row["type"]==10) {
+				echo "<center><h1>Visitor Details</h1></center>";
+				}
+			elseif ($row["type"]==20){
+				echo  "<center><h1>Employee Details</h1></center>"; 
+				}
+?>
+<br>
+<br>
   <div class="row">
   <div class="col-md-6 col-sm-12">
-<p><strong>First Name: </strong><?php echo $row['first_name'];?></p>
-<p><strong>Last Name: </strong><?php echo $row['last_name'];?></p>
-<p><strong>Gender: </strong><?php echo $row['Gender'];?></p>
-<p><strong>Address: </strong><?php echo $row['Address'];?></p>
-<p><strong>Email: </strong><?php echo $row['Email'];?></p>
-<p><strong>Contact Number : </strong><?php echo $row['Contact_Number'];?></p>
-<p><strong> Department to Visit : </strong><?php echo $row['Department'];?></p>
-<p><strong> Person to Visit : </strong><?php echo $row['person_to_visit'];?></p>
-<p><strong> Reason to Visit : </strong><?php echo $row['reason_to_visit'];?></p>
-	<p><strong> From : </strong><?php echo $row['From_visit'];?></p>
-<p><strong> To : </strong><?php echo $row['To_visit'];?></p>
+<p><strong>&nbsp First Name: </strong><?php echo $row['first_name'];?></p>
+<p><strong>&nbsp Last Name: </strong><?php echo $row['last_name'];?></p>
+ <?php 
+			if ($row["type"]==10) {
+				echo "<p><strong>&nbsp Gender:&nbsp &nbsp</strong>" . $row["Gender"] .  "</p>";
+				}
+			elseif ($row["type"]==20){
+				echo "";
+				}
+			if ($row["type"]==10) {
+				echo "<p><strong>&nbsp Address:&nbsp &nbsp</strong>" . $row["Address"] .  "</p>";
+				}
+			elseif ($row["type"]==20){
+				echo "";
+				} 
+			if ($row["type"]==10) {
+				echo "<p><strong>&nbsp Email Address:&nbsp</strong>" . $row["Email"] .  "</p>";
+				}
+			elseif ($row["type"]==20){
+				echo "";
+				}
+				if ($row["type"]==10) {
+				echo "<p><strong>&nbsp Contact Number:&nbsp</strong>" . $row["Contact_Number"] .  "</p>";
+				}
+			elseif ($row["type"]==20){
+				echo "";
+				}
+?>
+<p><strong>&nbsp Department to Visit : </strong><?php echo $row['Department'];?></p>
+<p><strong>&nbsp Person to Visit : </strong><?php echo $row['person_to_visit'];?></p>
+<p><strong>&nbsp Reason to Visit : </strong><?php echo $row['reason_to_visit'];?></p>
+	<p><strong>&nbsp From : </strong><?php echo $row['From_visit'];?></p>
+<p><strong>&nbsp To : </strong><?php echo $row['To_visit'];?></p>
   </div>
     <div class="col-md-6 col-sm-12">
 

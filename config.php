@@ -5,7 +5,7 @@
 
 
 /* Attempt to connect to MySQL database */
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$link = mysqli_connect("localhost", "root", "", "checklist");
 
 // Check connection
 if ($link === false) {

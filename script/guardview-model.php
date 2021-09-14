@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "Marieldbsql2021", "checklist");
+$link = mysqli_connect("localhost", "root", "", "checklist");
  
 // Check connection
 if($link === false){
